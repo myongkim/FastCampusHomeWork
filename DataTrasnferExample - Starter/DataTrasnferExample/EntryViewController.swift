@@ -40,7 +40,7 @@ final class EntryViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         super.shouldPerformSegue(withIdentifier: identifier, sender: sender)
         return true
-        print("3")
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -85,6 +85,7 @@ final class EntryViewController: UIViewController {
         guard let nextVC = vc as? NextViewController else { return }
         
         present(nextVC, animated: true)
+        print("5")
         
     }
     
