@@ -12,14 +12,39 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func unwindToViewController(_ sender: UIStoryboardSegue) {
+    
     }
-
-
+    
+    @IBAction func alertControl(_ sender: UIButton) {
+    
+        let alertButtonController = UIAlertController.init(title: "Alert", message: "message", preferredStyle: .alert)
+        
+        //alertcontroller variable
+        let yes = UIAlertAction.init(title: "Yes", style: .default, handler: nil)
+//        let no = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+//            guard let secondViewController = as? SecondViewController
+//        }
+        
+        
+        // alert actions
+        alertButtonController.addAction(yes)
+       // alertButtonController.addAction(no)
+        alertButtonController.addTextField { word in
+            word.placeholder = "this is the placeholder."
+        }
+        
+        // execution of the alertcontroller
+        present(alertButtonController, animated: true)
+        
+    
+    
+    }
+    
+    
+   
 }
 
