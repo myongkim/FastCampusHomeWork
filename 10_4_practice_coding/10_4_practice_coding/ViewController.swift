@@ -8,8 +8,13 @@
 
 import UIKit
 
+//final class Singleton
+
 class ViewController: UIViewController {
 
+    var message = "Please state your first and Last Name"
+    
+    @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -21,18 +26,25 @@ class ViewController: UIViewController {
     
     @IBAction func alertControl(_ sender: UIButton) {
     
-        let alertButtonController = UIAlertController.init(title: "Alert", message: "message", preferredStyle: .alert)
+        let alertButtonController = UIAlertController.init(title: "Your Name?", message: message, preferredStyle: .alert)
         
         //alertcontroller variable
-        let yes = UIAlertAction.init(title: "Yes", style: .default, handler: nil)
-//        let no = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-//            guard let secondViewController = as? SecondViewController
-//        }
+        let yes = UIAlertAction.init(title: "Yes", style: .default) { _ in
+            
+            self.nameLabel.text = alertButtonController.textFields![0].text
+            
+            
+            
+            
+            
+        }
+        let no = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
         
         
         // alert actions
         alertButtonController.addAction(yes)
-       // alertButtonController.addAction(no)
+        alertButtonController.addAction(no)
         alertButtonController.addTextField { word in
             word.placeholder = "this is the placeholder."
         }
