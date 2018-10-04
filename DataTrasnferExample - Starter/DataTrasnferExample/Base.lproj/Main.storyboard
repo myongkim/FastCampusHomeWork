@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Entry View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="EntryViewController" id="BYZ-38-t0r" customClass="EntryViewController" customModule="DataTrasnferExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DisplayText" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avl-26-F10">
+                                <rect key="frame" x="125" y="62" width="126" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kvi-EE-uir">
+                                <rect key="frame" x="128" y="268.5" width="120" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqm-x3-mNO">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="ActionSegue"/>
+                                        <connections>
+                                            <segue destination="8z2-c9-1hq" kind="presentation" id="bLn-7M-URD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWg-Ie-imM">
+                                        <rect key="frame" x="0.0" y="50" width="120" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="ManualSegue"/>
+                                        <connections>
+                                            <action selector="showNextViewControllerByManuelSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x9Z-Vf-UVV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vq5-0q-alL">
+                                        <rect key="frame" x="0.0" y="100" width="120" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Present"/>
+                                        <connections>
+                                            <action selector="showNextViewControllerByPresent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Up5-7r-SIs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="XkR-6U-kBl"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="faf-jv-9Md">
+                                <rect key="frame" x="30" y="107" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Avl-26-F10" firstAttribute="centerX" secondItem="S98-ne-Ody" secondAttribute="centerX" id="1eh-Ko-kIl"/>
+                            <constraint firstItem="faf-jv-9Md" firstAttribute="top" secondItem="Avl-26-F10" secondAttribute="bottom" constant="13.5" id="Oj7-hr-xAV"/>
+                            <constraint firstItem="kvi-EE-uir" firstAttribute="centerY" secondItem="S98-ne-Ody" secondAttribute="centerY" id="WPP-Ve-n1L"/>
+                            <constraint firstItem="S98-ne-Ody" firstAttribute="trailing" secondItem="faf-jv-9Md" secondAttribute="trailing" constant="30" id="bvs-UW-uW5"/>
+                            <constraint firstItem="Avl-26-F10" firstAttribute="top" secondItem="S98-ne-Ody" secondAttribute="top" constant="42" id="jRX-Pw-zBX"/>
+                            <constraint firstItem="faf-jv-9Md" firstAttribute="leading" secondItem="S98-ne-Ody" secondAttribute="leading" constant="30" id="jYe-g5-CMk"/>
+                            <constraint firstItem="kvi-EE-uir" firstAttribute="centerX" secondItem="S98-ne-Ody" secondAttribute="centerX" id="z5A-3x-ULE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="S98-ne-Ody"/>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="Avl-26-F10" id="Go2-we-7K1"/>
+                        <outlet property="textField" destination="faf-jv-9Md" id="Je5-j6-pF3"/>
+                        <segue destination="8z2-c9-1hq" kind="presentation" identifier="ManualSegue" id="kae-2i-hh3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Next View Controller-->
+        <scene sceneID="Qk4-uq-HxK">
+            <objects>
+                <viewController storyboardIdentifier="NextViewController" id="8z2-c9-1hq" customClass="NextViewController" customModule="DataTrasnferExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4DG-ws-bkA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MjQ-GG-dsF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Result" id="GHq-L3-15k">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="EA2-Kj-r7E">
+                                            <connections>
+                                                <segue destination="j9j-mF-QfV" kind="unwind" unwindAction="unwindToToEntryViewController:" id="xKd-Mx-f0e"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DisplayText" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDR-eI-WfE">
+                                <rect key="frame" x="30" y="114" width="315" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MjQ-GG-dsF" firstAttribute="leading" secondItem="QSQ-Gh-ku9" secondAttribute="leading" id="WdW-5q-b5A"/>
+                            <constraint firstItem="KDR-eI-WfE" firstAttribute="top" secondItem="MjQ-GG-dsF" secondAttribute="bottom" constant="50" id="Y4e-xP-ZbR"/>
+                            <constraint firstItem="KDR-eI-WfE" firstAttribute="leading" secondItem="QSQ-Gh-ku9" secondAttribute="leading" constant="30" id="YML-sM-Qta"/>
+                            <constraint firstItem="MjQ-GG-dsF" firstAttribute="top" secondItem="QSQ-Gh-ku9" secondAttribute="top" id="fQk-jQ-fnL"/>
+                            <constraint firstItem="QSQ-Gh-ku9" firstAttribute="trailing" secondItem="KDR-eI-WfE" secondAttribute="trailing" constant="30" id="nD7-1e-GZO"/>
+                            <constraint firstItem="MjQ-GG-dsF" firstAttribute="trailing" secondItem="QSQ-Gh-ku9" secondAttribute="trailing" id="vtC-iG-ycH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QSQ-Gh-ku9"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextViewControllerDisplay" destination="KDR-eI-WfE" id="NCr-BU-j2p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qr-6l-xqQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="j9j-mF-QfV" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="901.60000000000002" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kae-2i-hh3"/>
+    </inferredMetricsTieBreakers>
+</document>
