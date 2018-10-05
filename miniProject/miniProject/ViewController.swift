@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var message = "Your password is too short"
     let user1Id = "myongkim"
-    let user1Password = "myong328"
+    let user1Password = "123"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,22 +26,25 @@ class ViewController: UIViewController {
     
     @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
     }
-
+    
+   
     @IBAction func alertForWrongIDPW(_ sender: UIButton) {
       
         
         
-        if loginText.text == "myongkim" && passwordText.text == "myong328" {
+        if loginText.text == user1Id && passwordText.text == user1Password {
             
             print(loginText.text!)
             print(passwordText.text!)
-           
-           let secondVC = SecondViewController()
             
             
+            let secondVC = SecondViewController()
             guard let logtext = loginText.text else {return}
             secondVC.initialMessageDisplayID = logtext
+            
+            
             performSegue(withIdentifier: "login", sender: sender)
+            
             
             
             
@@ -59,7 +62,23 @@ class ViewController: UIViewController {
         
     }
     
-
-    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        
+      
+        
+        super.performSegue(withIdentifier: "login", sender: sender)
+       
+        let secondVC = SecondViewController()
+        guard let logtext = loginText.text else {return}
+        secondVC.initialMessageDisplayID = logtext
+       
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let sc = segue.destination as? SecondViewController else {return}
+        
+        sc.initialMessageDisplayID = loginText.text!
+        
+    }
+   
 }
 
