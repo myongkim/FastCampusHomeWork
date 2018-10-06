@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     var message = "Your password is too short"
     let user1Id = "myongkim"
-    let user1Password = "123"
+    let user1Password = "12345"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
       
         
         
-        if loginText.text == user1Id && passwordText.text == user1Password {
+        if loginText.text == user1Id && passwordText.text == user1Password && loginText.text!.count > 4 && passwordText.text!.count > 4 {
             
             print(loginText.text!)
             print(passwordText.text!)
@@ -62,21 +62,12 @@ class ViewController: UIViewController {
         
     }
     
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        
-      
-        
-        super.performSegue(withIdentifier: "login", sender: sender)
-       
-        let secondVC = SecondViewController()
-        guard let logtext = loginText.text else {return}
-        secondVC.initialMessageDisplayID = logtext
-       
-    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let sc = segue.destination as? SecondViewController else {return}
         
         sc.initialMessageDisplayID = loginText.text!
+        UserDefaults.standard.set(sc.initialMessageDisplayID, forKey: "loggedIn")
         
     }
    
