@@ -80,6 +80,61 @@ methodFunc.inchConversion(inch: 5)
 
 
 
+let someCharacter: Character = "z"
+let vowel = ["a","e","i","o","u"]
+
+if someCharacter == "a" || someCharacter == "e" {
+    print("\(someCharacter)")
+    
+} else if someCharacter == "b" || someCharacter == "c" {
+    print("\(someCharacter)")
+    
+} else {
+    print("not a character")
+    
+}
+
+switch someCharacter {
+case "a", "e", "i", "o", "u":
+    print("\(someCharacter)")
+case "b", "c":
+    print("\(someCharacter)")
+    
+default:
+    print("not a character")
+    
+}
+
+let number = 123
+func whatTheSwitch(_ value: Int) {
+    
+    if value > 5 {
+        print(number)
+        
+    } else if value < 5 {
+        print("this is less than five")
+        
+    } else {
+        print("I don't know what to print")
+    }
+    
+    
+
+//    
+//    switch value {
+//    case where value > 5:
+//        print(number)
+//    case where value < 5:
+//        print("this is less than five")
+//    default:
+//        print("I don't know what to print")
+        
+}
+    
+    
+    
+    
+    
 
 
 
@@ -97,27 +152,4 @@ methodFunc.inchConversion(inch: 5)
 
 
 
-
-
-//
-//class ToolBox {
-//
-//    var number = 0.0
-//    var result = 0.0
-//    var inCh = 0.0
-//
-//
-//    func inChtoCm(number: Double)  {
-//        self.number = number
-//
-//        result = number * 2.54
-//        print(result)
-//
-//    }
-//}
-//
-//let case1 = ToolBox()
-//
-//case1.inChtoCm(number: 3)
-//
 
