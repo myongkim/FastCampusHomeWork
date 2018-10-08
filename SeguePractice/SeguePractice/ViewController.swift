@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var displayOne: UILabel!
-    var displayNumber = 0
+//    var displayNumber = 0
     
     
     
@@ -52,6 +52,7 @@ class ViewController: UIViewController {
         guard let secondVC = sender.source as? SecondViewController else { return }
         
         displayOne.text = "\(secondVC.displayNumber2 + 10)"
+        print(displayOne.text)
       
         
         
