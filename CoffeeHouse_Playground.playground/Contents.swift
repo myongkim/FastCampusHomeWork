@@ -10,24 +10,22 @@ class Customer {
 
     var name = "Isaac"
     
-    func order(menu: String,to: String) {
+    func order(menu: CoffeeMenu,to: Barista) {
         let coffee = Coffee()
-        let barista = Barista()
-        barista.name = to
+        let baristaName = barista.name
         
-//        let americano = CoffeeMenu.americano
-//        let cappucino = CoffeeMenu.cappucino
-//        let macchiato = CoffeeMenu.Macchiato
-//        let espresso = CoffeeMenu.espresso
-        if menu == "americano" {
-            print("\(name)님이 ₩\(coffee.americano)원 짜리 Americano를 \(barista.name)에게 주문하셨습니다. ")
+        
+
+        
+        if menu == .americano {
+            print("\(name)님이 ₩\(.americano)원 짜리 Americano를 \(baristaName)에게 주문하셨습니다. ")
             
-        } else if menu == "cappucino" {
-             print("\(name)님이 ₩\(coffee.cappucino)원 짜리 Cappucino를 \(barista.name)에게 주문하셨습니다. ")
-        } else if menu == "Macchiato" {
-             print("\(name)님이 ₩\(coffee.Macchiato)원 짜리 Macchiato를 \(barista.name)에게 주문하셨습니다. ")
-        } else if menu == "espresso" {
-             print("\(name)님이 ₩\(coffee.espresso)원 짜리 Espresso를 \(barista.name)에게 주문하셨습니다. ")
+        } else if menu == .cappucino {
+             print("\(name)님이 ₩\(coffee.cappucino)원 짜리 Cappucino를 \(baristaName)에게 주문하셨습니다. ")
+        } else if menu == .Macchiato {
+             print("\(name)님이 ₩\(coffee.Macchiato)원 짜리 Macchiato를 \(baristaName)에게 주문하셨습니다. ")
+        } else if menu == .espresso {
+             print("\(name)님이 ₩\(coffee.espresso)원 짜리 Espresso를 \(baristaName)에게 주문하셨습니다. ")
         }
         
     }
@@ -41,12 +39,33 @@ enum CoffeeMenu {
     case espresso
 }
 
+
 class Coffee {
     
-    let americano = 1500
-    let cappucino = 2000
-    let Macchiato = 2500
-    let espresso = 2500
+//    let americano = 1500
+//    let cappucino = 2000
+//    let Macchiato = 2500
+//    let espresso = 2500
+//
+    var name: String
+    var price: Int
+    
+    init() {
+        name = "Americano"
+        price = 1500
+        
+        
+        
+    }
+//    enum price{
+//        case americano: 1500
+//        case cappucino: 2000
+//        case Macchiato: 2500
+//        case espresso: 2500
+//
+//    }
+    
+    
     
 }
 
@@ -55,25 +74,32 @@ class Barista {
     var name = "Lovely"
     
     
- 
+    init() {
+        name = "Lovely"
+    }
     
-    func makeCoffee(menu: String) {
+    
+    
+    
+    func makeCoffee(menu: CoffeeMenu) -> Coffee {
         
 //        let menu = CoffeeMenu
         
+        let initCoffee = Coffee()
         
         switch menu {
-            case "americano":
+            case .americano:
+               return initCoffee.name
+            case .cappucino:
+                return
+            case .Macchiato:
                 print("바리스타 \(name)이 아메리카노를 만들고 있습니다.")
-            case "cappucino":
-                print("바리스타 \(name)이 아메리카노를 만들고 있습니다.")
-            case "Macchiato":
-                print("바리스타 \(name)이 아메리카노를 만들고 있습니다.")
-            case "espresso":
+            case .espresso:
                 print("바리스타 \(name)이 아메리카노를 만들고 있습니다.")
             default:
                 print("바리스타 \(name)이 만들수 없는 커피 입니다. 다른걸 주문해 주세요")
         }
+        
         
         
     }
@@ -82,11 +108,16 @@ class Barista {
 
 let customer = Customer()
 customer.name = "Peter"
-customer.order(menu:"americano" , to: "Wendy")
+let barista = Barista()
+barista.name = "Mark"
+
+
+customer.order(menu: .americano, to: .)
 
 let barista = Barista()
 barista.name = "Hansome"
-barista.makeCoffee(menu: "americano")
+barista.makeCoffee(menu: .americano)
+
 
 
 

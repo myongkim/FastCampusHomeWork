@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     var money = 0
     var total = 0
     var message = "Time cannot be purchased. It is most valuable asset of all time."
-   
-    
+    var collection: Array<String> = []
+    var message2 = "This is what you have purchased so far"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,13 +62,89 @@ class ViewController: UIViewController {
     
     
     @IBAction func buyPizza(_ sender: UIButton) {
+// cannot produce message for the message when the money is less than $50
+//        guard money >= 50 else { return }
+//
+//        money -= 50
+//        priceText.text = "Remaining balnce: $\(money)"
+//        messageText.text = "Pizza has been puchased"
+//
+        if money >= 50 {
+            money -= 50
+            priceText.text = "Remaining balnce: $\(money)"
+            messageText.text = "Pizza has been puchased"
+            collection.append("Pizza")
+
+        } else {
+            
+            messageText.text = "You don't have enough money, please reload the money"
+        }
+        
+        
     }
     
     @IBAction func buyXBox(_ sender: UIButton) {
+        if money >= 350 {
+            money -= 350
+            priceText.text = "Remaining balnce: $\(money)"
+            messageText.text = "XboxOne has been puchased"
+            collection.append("XboxOne")
+            
+            
+        } else {
+            
+            messageText.text = "You don't have enough money, please reload the money"
+        }
+        
+        
     }
     
     @IBAction func buyCola(_ sender: UIButton) {
+        if money >= 2 {
+            money -= 2
+            priceText.text = "Remaining balnce: $\(money)"
+            messageText.text = "Cola has been puchased"
+            collection.append("Cola")
+            
+        } else {
+            
+            messageText.text = "You don't have enough money, please reload the money"
+        }
+        
     }
+    
+    
+    @IBAction func purchasedList(_ sender: UIButton) {
+        
+        let alertViewController = UIAlertController.init(title: "Purchased List", message: message2, preferredStyle: .alert)
+        
+        let alertMessage = UIAlertAction.init(title: "Dismiss", style: .default) { _ in
+            for i in self.collection {
+                print("you have puchased \(i)")
+                
+            }
+        }
+        
+        alertViewController.addAction(alertMessage)
+        present(alertViewController, animated: true)
+        
+        
+    }
+    
+//    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
+//
+//
+//    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+//
+//        guard let secondVC = segue.destination as? SecondViewController else { return }
+//
+//        secondVC.list = collection
+//
+//
+//    }
     
     
 }
