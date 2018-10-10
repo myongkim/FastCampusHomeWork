@@ -12,6 +12,10 @@
 		6A9CF597216E13BA005D194A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9CF595216E13BA005D194A /* Main.storyboard */; };
 		6A9CF599216E13BE005D194A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A9CF598216E13BE005D194A /* Assets.xcassets */; };
 		6A9CF59C216E13BE005D194A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A9CF59A216E13BE005D194A /* LaunchScreen.storyboard */; };
+		6A9CF5A4216E1845005D194A /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CF5A3216E1845005D194A /* Coffee.swift */; };
+		6A9CF5A6216E1858005D194A /* CoffeeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CF5A5216E1858005D194A /* CoffeeMenu.swift */; };
+		6A9CF5A8216E186B005D194A /* Barista.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CF5A7216E186B005D194A /* Barista.swift */; };
+		6A9CF5AA216E187D005D194A /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9CF5A9216E187D005D194A /* Customer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		6A9CF598216E13BE005D194A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A9CF59B216E13BE005D194A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A9CF59D216E13BE005D194A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A9CF5A3216E1845005D194A /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		6A9CF5A5216E1858005D194A /* CoffeeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMenu.swift; sourceTree = "<group>"; };
+		6A9CF5A7216E186B005D194A /* Barista.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barista.swift; sourceTree = "<group>"; };
+		6A9CF5A9216E187D005D194A /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 			children = (
 				6A9CF591216E13BA005D194A /* AppDelegate.swift */,
 				6A9CF593216E13BA005D194A /* ViewController.swift */,
+				6A9CF5A3216E1845005D194A /* Coffee.swift */,
+				6A9CF5A5216E1858005D194A /* CoffeeMenu.swift */,
+				6A9CF5A7216E186B005D194A /* Barista.swift */,
+				6A9CF5A9216E187D005D194A /* Customer.swift */,
 				6A9CF595216E13BA005D194A /* Main.storyboard */,
 				6A9CF598216E13BE005D194A /* Assets.xcassets */,
 				6A9CF59A216E13BE005D194A /* LaunchScreen.storyboard */,
@@ -136,7 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A9CF594216E13BA005D194A /* ViewController.swift in Sources */,
+				6A9CF5A8216E186B005D194A /* Barista.swift in Sources */,
 				6A9CF592216E13BA005D194A /* AppDelegate.swift in Sources */,
+				6A9CF5AA216E187D005D194A /* Customer.swift in Sources */,
+				6A9CF5A6216E1858005D194A /* CoffeeMenu.swift in Sources */,
+				6A9CF5A4216E1845005D194A /* Coffee.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
