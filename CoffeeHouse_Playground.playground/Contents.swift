@@ -6,6 +6,18 @@ var str = "Hello, playground"
 // 커피 주문 (Enumeration) ** 커피메뉴 (CoffeeMenu)  - case: americano, cappuccino, macchiato, espresso  with enum
 
 
+class Coffee {
+    var name: String
+    var price: Int
+    
+    init(name: String, price: Int){
+        name = "Americano"
+        price = 4
+        
+        
+    }
+    
+}
 class Customer {
 
     var name = "Isaac"
@@ -40,34 +52,6 @@ enum CoffeeMenu {
 }
 
 
-class Coffee {
-    
-//    let americano = 1500
-//    let cappucino = 2000
-//    let Macchiato = 2500
-//    let espresso = 2500
-//
-    var name: String
-    var price: Int
-    
-    init() {
-        name = "Americano"
-        price = 1500
-        
-        
-        
-    }
-//    enum price{
-//        case americano: 1500
-//        case cappucino: 2000
-//        case Macchiato: 2500
-//        case espresso: 2500
-//
-//    }
-    
-    
-    
-}
 
 class Barista {
     
