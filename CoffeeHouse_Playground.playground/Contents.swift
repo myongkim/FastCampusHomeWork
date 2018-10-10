@@ -72,6 +72,7 @@ let barista = Barista(name: "Mark")
 
 print(customer.order(barista: barista, menu: CoffeeMenu.americano))
 
+barista.makeCoffee(menu: CoffeeMenu.americano)
 
 
 
