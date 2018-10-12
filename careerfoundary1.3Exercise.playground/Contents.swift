@@ -23,7 +23,7 @@ print(shapeDesciption)
 
 // class inheritance
 
-struct Animal {
+class Animal {
     var age: Int
     let species: String
     
@@ -50,23 +50,23 @@ print(tiger2.age)
 
 
 
-//class Cat: Animal {
-//    let furColor: String
-//    let name: String
-//
-//    init(age: Int, species: String, furColor: String, name: String){
-//
-//        self.furColor = furColor
-//        self.name = name
-//        // do super init to initialize the upper Class. But self has to be initilize first that is why super is below the furColor and name at this time.
-//        super.init(age: age, species: species)
-//    }
-//
-//}
-//
-//var animal2 = Cat(age: 1, species: "Cat", furColor: "brown", name: "Milo")
-//print(animal2.species)
-//print(animal2.furColor)
+class Cat: Animal {
+    let furColor: String
+    let name: String
+
+    init(age: Int, species: String, furColor: String, name: String){
+
+        self.furColor = furColor
+        self.name = name
+        // do super init to initialize the upper Class. But self has to be initilize first that is why super is below the furColor and name at this time.
+        super.init(age: age, species: species)
+    }
+
+}
+
+var animal2 = Cat(age: 1, species: "Cat", furColor: "brown", name: "Milo")
+print(animal2.species)
+print(animal2.furColor)
 
 
 //Enumerations
@@ -167,7 +167,29 @@ let person = Person(name: "Issac", age: 34, weight: 160, gender: .male)
 
 person.nameCall()
 
+class Countries: Person {
+    var countryName: String
+    var countryRank: Int
+    
+    init(countryName: String, countryRank: Int, name: String, age: Int, weight: Int, gender: Gender) {
+        self.countryName = countryName
+        self.countryRank = countryRank
+        super.init(name: name, age: age, weight: weight, gender: gender)
+        
+        
+    }
+    func makeAmericaGreatAgain() {
+        
+        print("\(countryName) is #\(countryRank) country in the whole world. \(name) is the citizen of this country.")
+        
+        
+    }
+    
+    
+}
+var countires = Countries(countryName: "U.S", countryRank: 1, name: "Isaac", age: 34, weight: 160, gender: .male)
 
+countires.makeAmericaGreatAgain()
 
 
 
