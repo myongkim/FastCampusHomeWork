@@ -21,18 +21,20 @@ final class ViewController: UIViewController {
         view.addSubview(firstView)
         view.addSubview(secondView)
         
-        myAutoLayout()
+//        myAutoLayout()
+        autoLayoutWithAnchors()
+        
         
     }
     
-    private func myAutoLayout() {
-        firstView.frame = CGRect(x: 20, y: 20, width: view.bounds.width - 50 , height: view.bounds.height - 40)
-        secondView.frame = CGRect(x: 120, y: 20, width: view.bounds.width - 50, height: view.bounds.height - 40)
+//    private func myAutoLayout() {
+//        firstView.frame = CGRect(x: 20, y: 20, width: view.bounds.width - 50 , height: view.bounds.height - 40)
+//        secondView.frame = CGRect(x: 120, y: 20, width: view.bounds.width - 50, height: view.bounds.height - 40)
 //
 //        firstView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 //        secondView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
-    }
+//    }
     
 //    override func viewWillLayoutSubviews() {
 //        super.viewWillLayoutSubviews()
@@ -52,7 +54,28 @@ final class ViewController: UIViewController {
 //
 //        secondView.frame = CGRect(x: firstView.frame.maxX + 10, y: yOffset, width: firstView.bounds.width, height: firstView.bounds.height)
 //    }
-//    
+
+    private func autoLayoutWithAnchors() {
+        
+        firstView.translatesAutoresizingMaskIntoConstraints = false
+        firstView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        firstView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+        firstView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
+        firstView.trailingAnchor.constraint(equalTo: secondView.leadingAnchor, constant: -10).isActive = true
+        
+        firstView.widthAnchor.constraint(equalTo: secondView.widthAnchor, multiplier: 1).isActive = true
+        
+        secondView.translatesAutoresizingMaskIntoConstraints = false
+        secondView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40).isActive = true
+        // it does not need to have below code since firstView trailingAnchor alredy has a constraint with it.
+//        secondView.leadingAnchor.constraint(equalTo: firstView.trailingAnchor).isActive = true
+        secondView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40).isActive = true
+        secondView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        
+        
+        
+    }
+    
 }
 
 
