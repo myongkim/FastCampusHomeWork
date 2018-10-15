@@ -49,11 +49,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
         yenLabel.text = "$\(dollarAmount * yenRate)"
         euroLabel.text = "$\(dollarAmount * euroRate)"
         dollarAmount = 0.0
+    }
+    
+    
+    @IBAction func clearButton(_ sender: UIButton) {
         
+        inputTextField.text = ""
+        poundLabel.text = "0.0"
+        yenLabel.text = "0.0"
+        euroLabel.text = "0.0"
         
         
     }
-    
     
     
 }
