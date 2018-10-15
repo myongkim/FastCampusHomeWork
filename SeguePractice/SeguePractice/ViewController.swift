@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         guard let secondVC = segue.destination as? SecondViewController else { return }
         
-        secondVC.displayNumber2 = Int(secondVC.displayNumber2) + 1
+        secondVC.displayNumber2 = Int(displayOne.text!)! + 1
         
       
         
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     @IBAction func unwindToViewController(_ sender: UIStoryboardSegue) {
         guard let secondVC = sender.source as? SecondViewController else { return }
         
-        displayOne.text = "\(secondVC.displayNumber2 + 10)"
+        displayOne.text = "\(Int(displayOne.text!)! + 10)"
         print(displayOne.text)
       
         
