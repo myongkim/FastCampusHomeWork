@@ -148,7 +148,12 @@
                     </view>
                     <size key="freeformSize" width="1500" height="667"/>
                     <connections>
+                        <outlet property="pageControl" destination="Pnk-1O-XPf" id="gMJ-BW-pIs"/>
                         <outlet property="scrollView" destination="OBq-EY-9zY" id="yAs-MB-Aii"/>
+                        <outlet property="view1" destination="X5v-RO-KFg" id="VTs-NQ-jXq"/>
+                        <outlet property="view2" destination="lfw-UM-CkQ" id="At5-IP-9ux"/>
+                        <outlet property="view3" destination="OLk-Z7-NHB" id="DMc-ua-4DZ"/>
+                        <outlet property="view4" destination="eaZ-mo-seA" id="bhO-WW-BWq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tq3-97-tNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
