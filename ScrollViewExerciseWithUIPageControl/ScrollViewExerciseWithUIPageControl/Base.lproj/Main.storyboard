@@ -105,12 +105,6 @@
                                         <rect key="frame" x="1125" y="0.0" width="375" height="647"/>
                                         <color key="backgroundColor" red="0.95954096499999997" green="0.91281367869999996" blue="0.88761853950000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="Pnk-1O-XPf">
-                                        <rect key="frame" x="722.5" y="560" width="55" height="37"/>
-                                        <connections>
-                                            <action selector="pageControl:" destination="bde-uV-9p2" eventType="valueChanged" id="GOP-VO-i1I"/>
-                                        </connections>
-                                    </pageControl>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="X5v-RO-KFg" firstAttribute="width" secondItem="OBq-EY-9zY" secondAttribute="width" priority="750" id="2oO-9F-wVT"/>
@@ -123,10 +117,8 @@
                                     <constraint firstAttribute="bottom" secondItem="lfw-UM-CkQ" secondAttribute="bottom" id="On3-Sf-viT"/>
                                     <constraint firstItem="lfw-UM-CkQ" firstAttribute="leading" secondItem="X5v-RO-KFg" secondAttribute="trailing" id="Pxt-zv-cLW"/>
                                     <constraint firstAttribute="trailing" secondItem="eaZ-mo-seA" secondAttribute="trailing" id="XmR-6S-sgR"/>
-                                    <constraint firstItem="Pnk-1O-XPf" firstAttribute="centerX" secondItem="OBq-EY-9zY" secondAttribute="centerX" id="eRA-3u-O9X"/>
                                     <constraint firstAttribute="bottom" secondItem="X5v-RO-KFg" secondAttribute="bottom" id="gNO-vY-Rle"/>
                                     <constraint firstItem="eaZ-mo-seA" firstAttribute="leading" secondItem="OLk-Z7-NHB" secondAttribute="trailing" id="goM-Oe-io7"/>
-                                    <constraint firstAttribute="bottom" secondItem="Pnk-1O-XPf" secondAttribute="bottom" constant="50" id="iHV-oC-GIf"/>
                                     <constraint firstItem="lfw-UM-CkQ" firstAttribute="top" secondItem="OBq-EY-9zY" secondAttribute="top" id="kUc-Ug-MDr"/>
                                     <constraint firstAttribute="bottom" secondItem="eaZ-mo-seA" secondAttribute="bottom" id="oLp-cq-nc6"/>
                                     <constraint firstItem="eaZ-mo-seA" firstAttribute="top" secondItem="OBq-EY-9zY" secondAttribute="top" id="rDq-Lj-aHf"/>
@@ -136,11 +128,16 @@
                                     <constraint firstItem="X5v-RO-KFg" firstAttribute="top" secondItem="OBq-EY-9zY" secondAttribute="top" id="xW0-4f-mxl"/>
                                 </constraints>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="zt6-h2-pJ6">
+                                <rect key="frame" x="722.5" y="580" width="55" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="zt6-h2-pJ6" firstAttribute="centerX" secondItem="OBq-EY-9zY" secondAttribute="centerX" id="8iK-gY-2be"/>
                             <constraint firstItem="OBq-EY-9zY" firstAttribute="top" secondItem="RHe-DV-gai" secondAttribute="top" id="Bot-Oy-eyA"/>
                             <constraint firstItem="RHe-DV-gai" firstAttribute="trailing" secondItem="OBq-EY-9zY" secondAttribute="trailing" id="Jzx-42-KyV"/>
+                            <constraint firstItem="RHe-DV-gai" firstAttribute="bottom" secondItem="zt6-h2-pJ6" secondAttribute="bottom" constant="50" id="POE-V5-f0y"/>
                             <constraint firstItem="OBq-EY-9zY" firstAttribute="leading" secondItem="RHe-DV-gai" secondAttribute="leading" id="rO4-Xx-aZa"/>
                             <constraint firstItem="RHe-DV-gai" firstAttribute="bottom" secondItem="OBq-EY-9zY" secondAttribute="bottom" id="uIM-0o-oh9"/>
                         </constraints>
@@ -148,7 +145,7 @@
                     </view>
                     <size key="freeformSize" width="1500" height="667"/>
                     <connections>
-                        <outlet property="pageControl" destination="Pnk-1O-XPf" id="gMJ-BW-pIs"/>
+                        <outlet property="pageControl" destination="zt6-h2-pJ6" id="vEZ-jL-hUw"/>
                         <outlet property="scrollView" destination="OBq-EY-9zY" id="yAs-MB-Aii"/>
                         <outlet property="view1" destination="X5v-RO-KFg" id="VTs-NQ-jXq"/>
                         <outlet property="view2" destination="lfw-UM-CkQ" id="At5-IP-9ux"/>
@@ -157,7 +154,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tq3-97-tNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="bde-uV-9p2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="100.8" y="914.392803598201"/>
         </scene>
