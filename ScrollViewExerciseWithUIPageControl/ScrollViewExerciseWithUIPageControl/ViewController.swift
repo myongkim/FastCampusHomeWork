@@ -35,8 +35,8 @@ class ViewController: UIViewController {
 }
 extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-                pageControl.currentPage = Int(scrollView.contentOffset.x / view.frame.width)
-        
+            //   pageControl.currentPage = Int(scrollView.contentOffset.x / view.frame.width)
+        pageControl.currentPage = Int(scrollView.contentOffset.x / view.frame.width)
         print(scrollView)
         
         
