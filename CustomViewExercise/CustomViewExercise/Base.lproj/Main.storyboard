@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CustomViewExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqg-zB-I4C">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFa-Fi-zDW" customClass="DrinkView" customModule="CustomViewExercise" customModuleProvider="target">
+                                        <rect key="frame" x="192.5" y="10" width="172.5" height="308.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="coke"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ma-Cc-Kbx" customClass="DrinkView" customModule="CustomViewExercise" customModuleProvider="target">
+                                        <rect key="frame" x="192.5" y="328.5" width="172.5" height="308.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="coke"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2O-rq-pG7" customClass="DrinkView" customModule="CustomViewExercise" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="172.5" height="308.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="coke"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJe-b5-nVB" customClass="DrinkView" customModule="CustomViewExercise" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="328.5" width="172.5" height="308.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="image" value="coke"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yFa-Fi-zDW" firstAttribute="top" secondItem="lqg-zB-I4C" secondAttribute="top" constant="10" id="9RI-uJ-Xey"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Ma-Cc-Kbx" secondAttribute="trailing" constant="10" id="A7w-HL-aXT"/>
+                                    <constraint firstItem="IJe-b5-nVB" firstAttribute="width" secondItem="T2O-rq-pG7" secondAttribute="width" id="DMx-Jb-lPf"/>
+                                    <constraint firstItem="IJe-b5-nVB" firstAttribute="top" secondItem="T2O-rq-pG7" secondAttribute="bottom" constant="10" id="Ga7-7x-ojT"/>
+                                    <constraint firstItem="IJe-b5-nVB" firstAttribute="top" secondItem="T2O-rq-pG7" secondAttribute="bottom" constant="10" id="HpI-J6-9kd"/>
+                                    <constraint firstItem="yFa-Fi-zDW" firstAttribute="leading" secondItem="T2O-rq-pG7" secondAttribute="trailing" constant="10" id="IAM-1b-7TX"/>
+                                    <constraint firstAttribute="trailing" secondItem="yFa-Fi-zDW" secondAttribute="trailing" constant="10" id="IHq-dZ-e3n"/>
+                                    <constraint firstItem="yFa-Fi-zDW" firstAttribute="height" secondItem="T2O-rq-pG7" secondAttribute="height" id="Jlh-SY-a8w"/>
+                                    <constraint firstItem="0Ma-Cc-Kbx" firstAttribute="leading" secondItem="IJe-b5-nVB" secondAttribute="trailing" constant="10" id="Ln9-MP-QUE"/>
+                                    <constraint firstItem="T2O-rq-pG7" firstAttribute="leading" secondItem="lqg-zB-I4C" secondAttribute="leading" constant="10" id="Q4b-JI-yld"/>
+                                    <constraint firstItem="T2O-rq-pG7" firstAttribute="top" secondItem="lqg-zB-I4C" secondAttribute="top" constant="10" id="S9J-zL-feB"/>
+                                    <constraint firstItem="0Ma-Cc-Kbx" firstAttribute="top" secondItem="yFa-Fi-zDW" secondAttribute="bottom" constant="10" id="SFR-LG-L4n"/>
+                                    <constraint firstItem="0Ma-Cc-Kbx" firstAttribute="width" secondItem="T2O-rq-pG7" secondAttribute="width" id="hIx-qr-anD"/>
+                                    <constraint firstItem="yFa-Fi-zDW" firstAttribute="leading" secondItem="T2O-rq-pG7" secondAttribute="trailing" constant="10" id="k71-KJ-cDi"/>
+                                    <constraint firstAttribute="bottom" secondItem="IJe-b5-nVB" secondAttribute="bottom" constant="10" id="n3I-H0-sAc"/>
+                                    <constraint firstItem="IJe-b5-nVB" firstAttribute="height" secondItem="T2O-rq-pG7" secondAttribute="height" id="oQE-lM-TA3"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Ma-Cc-Kbx" secondAttribute="bottom" constant="10" id="q2J-zr-NWW"/>
+                                    <constraint firstItem="yFa-Fi-zDW" firstAttribute="width" secondItem="T2O-rq-pG7" secondAttribute="width" id="tJJ-ca-flE"/>
+                                    <constraint firstItem="0Ma-Cc-Kbx" firstAttribute="leading" secondItem="IJe-b5-nVB" secondAttribute="trailing" constant="10" id="yIF-4Y-BQW"/>
+                                    <constraint firstItem="IJe-b5-nVB" firstAttribute="leading" secondItem="lqg-zB-I4C" secondAttribute="leading" constant="10" id="ynF-0o-0Ca"/>
+                                    <constraint firstItem="0Ma-Cc-Kbx" firstAttribute="height" secondItem="T2O-rq-pG7" secondAttribute="height" id="z2a-DO-s8Q"/>
+                                    <constraint firstItem="0Ma-Cc-Kbx" firstAttribute="top" secondItem="yFa-Fi-zDW" secondAttribute="bottom" constant="10" id="zTk-CK-0gy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lqg-zB-I4C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3be-Ii-OmA"/>
+                            <constraint firstItem="lqg-zB-I4C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CFg-qw-E1U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lqg-zB-I4C" secondAttribute="bottom" id="k2m-wP-H1K"/>
+                            <constraint firstItem="lqg-zB-I4C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xvG-3A-iOu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="customVendingMachine" destination="T2O-rq-pG7" collectionClass="NSMutableArray" id="Mfx-Yx-HJp"/>
+                        <outletCollection property="customVendingMachine" destination="yFa-Fi-zDW" collectionClass="NSMutableArray" id="jxt-mY-yXV"/>
+                        <outletCollection property="customVendingMachine" destination="IJe-b5-nVB" collectionClass="NSMutableArray" id="exs-hV-2Jj"/>
+                        <outletCollection property="customVendingMachine" destination="0Ma-Cc-Kbx" collectionClass="NSMutableArray" id="b0J-aO-6L5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coke" width="320" height="180"/>
+    </resources>
+</document>
