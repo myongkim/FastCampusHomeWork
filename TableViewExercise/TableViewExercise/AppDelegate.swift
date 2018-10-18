@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TableViewExercise
 //
-//  Created by Isaac Kim on 16/10/2018.
+//  Created by Isaac Kim on 18/10/2018.
 //  Copyright © 2018 Isaac Kim. All rights reserved.
 //
 
