@@ -21,30 +21,12 @@ final class ViewController: UIViewController {
     
     var data: [itemProperty] = [
    
-        itemProperty(imageName: "iPhone8", productName: "iphone 8"),
-        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold"),
-        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold"),
-        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
-        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White"),
+        itemProperty(imageName: "iPhone8", productName: "iphone 8", count: 5),
+        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold", count: 10),
+        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold", count: 3),
+        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray", count: 5),
+        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White", count: 6)
       
-        itemProperty(imageName: "iPhone8", productName: "iphone 8"),
-        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold"),
-        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold"),
-        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
-        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White"),
-      
-        itemProperty(imageName: "iPhone8", productName: "iphone 8"),
-        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold"),
-        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold"),
-        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
-        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White"),
-    
-        itemProperty(imageName: "iPhone8", productName: "iphone 8"),
-        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold"),
-        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold"),
-        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
-        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White")
-        
         
         
    ]
@@ -102,16 +84,20 @@ extension ViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
     
-    print(data.count)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
     let dataCell = data[indexPath.row]
+    print(data.count)
+    
     cell.textLabel?.text = dataCell.productName
     cell.imageView?.image = UIImage(named: "\(dataCell.imageName)")
 //    cell.detailTextLabel?.text = inventoryLabel.text
     cell.detailTextLabel?.text = "12"
 //    print(cell.detailTextLabel?.text)
-   
+   cell.detailTextLabel?.text = "\(dataCell.count)"
+    print("datacellcount", dataCell.count)
+    
+    
     return cell
   }
    

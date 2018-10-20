@@ -12,11 +12,13 @@ class itemProperty {
     
     let imageName: String
     let productName: String
+    let count: Int
 
     
-    init(imageName: String, productName: String) {
+    init(imageName: String, productName: String, count: Int) {
         self.imageName = imageName
         self.productName = productName
+        self.count = count
 
         
         
