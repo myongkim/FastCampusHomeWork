@@ -13,6 +13,7 @@ final class ViewController: UIViewController {
   @IBOutlet private weak var tableView: UITableView!
    var inventoryNum = 0
    var total = 0
+   var message = "Sorry you cannot buy more item. You purchaesd maxed out the item"
     
     
  
@@ -26,23 +27,23 @@ final class ViewController: UIViewController {
         itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
         itemProperty(imageName: "iPhoneX_White", productName: "iphone X White"),
       
-        itemProperty(imageName: "iPhone8 1", productName: "iphone 8"),
-        itemProperty(imageName: "iPhoneSE_Gold 1", productName: "iphoneSE Gold"),
-        itemProperty(imageName: "iPhoneSE_RoseGold 1", productName: "iphone Rose Gold"),
-        itemProperty(imageName: "iPhoneX_SpaceGray 1", productName: "iphoneX Space Gray"),
-        itemProperty(imageName: "iPhoneX_White 1", productName: "iphone X White"),
+        itemProperty(imageName: "iPhone8", productName: "iphone 8"),
+        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold"),
+        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold"),
+        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
+        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White"),
       
-        itemProperty(imageName: "iPhone8 2", productName: "iphone 8"),
-        itemProperty(imageName: "iPhoneSE_Gold 2", productName: "iphoneSE Gold"),
-        itemProperty(imageName: "iPhoneSE_RoseGold 2", productName: "iphone Rose Gold"),
-        itemProperty(imageName: "iPhoneX_SpaceGray 2", productName: "iphoneX Space Gray"),
-        itemProperty(imageName: "iPhoneX_White 2", productName: "iphone X White"),
+        itemProperty(imageName: "iPhone8", productName: "iphone 8"),
+        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold"),
+        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold"),
+        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
+        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White"),
     
-        itemProperty(imageName: "iPhone8 3", productName: "iphone 8"),
-        itemProperty(imageName: "iPhoneSE_Gold 3", productName: "iphoneSE Gold"),
-        itemProperty(imageName: "iPhoneSE_RoseGold 3", productName: "iphone Rose Gold"),
-        itemProperty(imageName: "iPhoneX_SpaceGray 3", productName: "iphoneX Space Gray"),
-        itemProperty(imageName: "iPhoneX_White 3", productName: "iphone X White")
+        itemProperty(imageName: "iPhone8", productName: "iphone 8"),
+        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold"),
+        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold"),
+        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray"),
+        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White")
         
         
         
@@ -61,13 +62,29 @@ final class ViewController: UIViewController {
         
         let itemInfo = ItemCell()
        
-        inventoryNum += 1
-        print(inventoryNum)
-        total = inventoryNum
-        print(total)
-        itemInfo.inventoryLabel?.text = "\(total)"
+        // itemInfo.inventoryLabel?.text = "\(total)"
         print(itemInfo.inventoryLabel?.text)
         // do increase the number but here i see a nil value for the inventoryLabel
+        
+     
+        
+        if total > 15 {
+            
+            let alertViewController = UIAlertController(title: "Max # purchased", message: message, preferredStyle: .alert)
+            let dismiss = UIAlertAction(title: "Dimiss", style: .cancel, handler: nil)
+            
+            alertViewController.addAction(dismiss)
+            present(alertViewController, animated: true)
+        } else {
+            inventoryNum += 1
+            total = inventoryNum
+             print(inventoryNum)
+             print(total)
+        }
+        
+        
+       
+        
         
         
     }
