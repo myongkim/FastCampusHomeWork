@@ -10,10 +10,12 @@ import UIKit
 
 // MARK: - Class Implementation
 
-final class ItemCell: UITableViewCell {
+class ItemCell : UITableViewCell {
   
-  // MARK: Properties
-  
-  
+    @IBOutlet weak var inventoryLabel: UILabel!
+    // MARK: Properties
+    
   
 }
+
+

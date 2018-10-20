@@ -13,6 +13,7 @@
 		52886AC320DA3869006004D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52886AC220DA3869006004D5 /* Assets.xcassets */; };
 		52886AC620DA3869006004D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52886AC420DA3869006004D5 /* LaunchScreen.storyboard */; };
 		52886ACE20DA38B7006004D5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52886ACD20DA38B7006004D5 /* ItemCell.swift */; };
+		6AEFE592217B06BB006E1FF5 /* itemProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEFE591217B06BB006E1FF5 /* itemProperty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		52886AC520DA3869006004D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52886AC720DA3869006004D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52886ACD20DA38B7006004D5 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		6AEFE591217B06BB006E1FF5 /* itemProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemProperty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				52886ABB20DA3868006004D5 /* AppDelegate.swift */,
 				52886ABD20DA3868006004D5 /* ViewController.swift */,
+				6AEFE591217B06BB006E1FF5 /* itemProperty.swift */,
 				52886ACD20DA38B7006004D5 /* ItemCell.swift */,
 				52886ABF20DA3868006004D5 /* Main.storyboard */,
 				52886AC220DA3869006004D5 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52886ABE20DA3868006004D5 /* ViewController.swift in Sources */,
+				6AEFE592217B06BB006E1FF5 /* itemProperty.swift in Sources */,
 				52886ABC20DA3868006004D5 /* AppDelegate.swift in Sources */,
 				52886ACE20DA38B7006004D5 /* ItemCell.swift in Sources */,
 			);
