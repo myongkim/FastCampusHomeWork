@@ -14,29 +14,41 @@ final class ViewController: UIViewController {
    var inventoryNum = 0
    var total = 0
    var message = "Sorry you cannot buy more item. You purchaesd maxed out the item"
-    
+   let identifier = "ItemCell"
     
  
     
     
-    var data: [itemProperty] = [
-   
-        itemProperty(imageName: "iPhone8", productName: "iphone 8", count: 5),
-        itemProperty(imageName: "iPhoneSE_Gold", productName: "iphoneSE Gold", count: 10),
-        itemProperty(imageName: "iPhoneSE_RoseGold", productName: "iphone Rose Gold", count: 3),
-        itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iphoneX Space Gray", count: 5),
-        itemProperty(imageName: "iPhoneX_White", productName: "iphone X White", count: 6)
-      
-        
-        
-   ]
+    var data: [itemProperty] = []
     
   override func viewDidLoad() {
     super.viewDidLoad()
    
+    data = createArray()
     
     
   }
+    
+    func createArray() -> [itemProperty] {
+        
+        var tempItem: [itemProperty] = []
+        
+        let item1 = itemProperty(imageName: "iPhone8", productName: "iphone 8", count: 5)
+        let item2 = itemProperty(imageName: "iPhoneSE_Gold", productName: "iPhoneSE Gold", count: 5)
+        let item3 = itemProperty(imageName: "iPhoneSE_RoseGold", productName:"iPhoneX RoseGold", count: 7)
+        let item4 = itemProperty(imageName: "iPhoneX_SpaceGray", productName: "iPhoneX Space Gray", count: 7)
+        let itme5 = itemProperty(imageName: "iPhoneX_White", productName: "iPhoneX White", count: 7)
+        
+        tempItem.append(item1)
+        tempItem.append(item2)
+        tempItem.append(item3)
+        tempItem.append(item4)
+        tempItem.append(itme5)
+        
+        return tempItem
+    }
+
+    
 
 
     @IBAction func increaseBuyButton(_ sender: UIButton) {
@@ -85,7 +97,7 @@ extension ViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
     let dataCell = data[indexPath.row]
     print(data.count)
     

@@ -54,15 +54,21 @@
                                     <outletCollection property="gestureRecognizers" destination="goS-Jw-Nbq" appends="YES" id="5ff-dA-frC"/>
                                 </connections>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bmb-4K-j4g" customClass="RatingControl" customModule="FoodRatingApp" customModuleProvider="target">
+                                <rect key="frame" x="50" y="516" width="275" height="62"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vos-EF-UdH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="5f7-Vy-vJT"/>
                             <constraint firstItem="zjQ-Ag-vLo" firstAttribute="top" secondItem="Vos-EF-UdH" secondAttribute="bottom" constant="15" id="Bsu-f9-DBr"/>
+                            <constraint firstItem="Bmb-4K-j4g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JO6-qd-mbX"/>
                             <constraint firstItem="Vos-EF-UdH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cBt-zg-LPK"/>
                             <constraint firstAttribute="trailing" secondItem="Vos-EF-UdH" secondAttribute="trailing" id="cbo-ew-Qc1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bmb-4K-j4g" secondAttribute="bottom" constant="89" id="lf4-K6-qwf"/>
                             <constraint firstItem="zjQ-Ag-vLo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27.5" id="nHi-1i-dD8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zjQ-Ag-vLo" secondAttribute="trailing" constant="27.5" id="ocU-Jy-HxV"/>
+                            <constraint firstItem="Bmb-4K-j4g" firstAttribute="top" secondItem="zjQ-Ag-vLo" secondAttribute="bottom" constant="18.5" id="x5g-2E-gB5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
