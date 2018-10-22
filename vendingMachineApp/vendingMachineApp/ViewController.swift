@@ -131,21 +131,7 @@ class ViewController: UIViewController {
         
     }
     
-//    @IBAction func unwindToViewController(_ unwindSegue: UIStoryboardSegue) {
-//
-//
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        super.prepare(for: segue, sender: sender)
-//
-//        guard let secondVC = segue.destination as? SecondViewController else { return }
-//
-//        secondVC.list = collection
-//
-//
-//    }
-    
+
     
 }
 
