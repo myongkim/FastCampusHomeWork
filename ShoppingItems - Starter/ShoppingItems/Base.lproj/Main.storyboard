@@ -33,7 +33,7 @@
                                                     <rect key="frame" x="330" y="19" width="30" height="30"/>
                                                     <state key="normal" title="✚"/>
                                                     <connections>
-                                                        <action selector="increaseBuyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YW8-hk-xmn"/>
+                                                        <action selector="tap:" destination="cAq-vS-Whd" eventType="touchUpInside" id="Ot4-N4-uQa"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOD-jA-VGx">

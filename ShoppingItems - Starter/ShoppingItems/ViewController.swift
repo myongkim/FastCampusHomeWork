@@ -54,10 +54,10 @@ final class ViewController: UIViewController {
     @IBAction func increaseBuyButton(_ sender: UIButton) {
        print("tapped")
         
-        let itemInfo = ItemCell()
+//        let itemInfo = ItemCell()
        
-        // itemInfo.inventoryLabel?.text = "\(total)"
-        print(itemInfo.inventoryLabel?.text)
+//         itemInfo.inventoryLabel?.text = "\(total)"
+//        print(itemInfo.inventoryLabel?.text)
         // do increase the number but here i see a nil value for the inventoryLabel
         
      
@@ -97,10 +97,10 @@ extension ViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! ItemCell
     let dataCell = data[indexPath.row]
     print(data.count)
-    
+    cell.delegate = self
     cell.textLabel?.text = dataCell.productName
     cell.imageView?.image = UIImage(named: "\(dataCell.imageName)")
 //    cell.detailTextLabel?.text = inventoryLabel.text
@@ -109,10 +109,20 @@ extension ViewController: UITableViewDataSource {
    cell.detailTextLabel?.text = "\(dataCell.count)"
     print("datacellcount", dataCell.count)
     
-    
     return cell
   }
    
     
 }
 
+extension ViewController: ItemCellDelegate {
+    
+    func tapButton(cell: ItemCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        // Model Update
+        data[indexPath.row].count += 1
+        
+        cell.inventoryLabel.text = "\(data[indexPath.row].count)"
+    }
+    
+}
