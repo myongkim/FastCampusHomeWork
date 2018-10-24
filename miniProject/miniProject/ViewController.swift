@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     
@@ -29,7 +29,14 @@ class ViewController: UIViewController {
     
    
     @IBAction func alertForWrongIDPW(_ sender: UIButton) {
+        
+        
+        
       
+        let userDefault = UserDefaults.standard
+        userDefault.set(user1Id, forKey: "userID")
+        userDefault.set(user1Password, forKey: "userPassword")
+        
         
         
         if loginText.text == user1Id && passwordText.text == user1Password && loginText.text!.count > 4 && passwordText.text!.count > 4 {
@@ -38,10 +45,14 @@ class ViewController: UIViewController {
             print(passwordText.text!)
             
             
+            
+            
+            
             let secondVC = SecondViewController()
             guard let logtext = loginText.text else {return}
             secondVC.initialMessageDisplayID = logtext
             
+       
             
             performSegue(withIdentifier: "login", sender: sender)
             

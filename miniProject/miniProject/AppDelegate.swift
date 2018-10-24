@@ -15,7 +15,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        let userDefault = UserDefaults.standard
+        let savedID = userDefault.object(forKey: "userID")
+        let savedPW = userDefault.object(forKey: "userPassword")
+        
+        guard let castedSavedID = savedID as? String,
+              let castedSavedPW = savedPW as? String
+                else { throws }
+        
+
+        
+        
+        if castedSavedID == "myongkim" && castedSavedPW == "12345" {
+            
+            
+            window?.rootViewController = ViewController()
+            window?.makeKeyAndVisible()
+        } else {
+            window?.rootViewController = SecondViewController()
+            window?.makeKeyAndVisible()
+            
+        }
+        
+        
       
         return true
     }
