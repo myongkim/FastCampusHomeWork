@@ -16,10 +16,25 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let userDefaults = UserDefaults.standard
+        firstNameTextField.text = userDefaults.object(forKey: "FirstName") as? String
+        lastNameTextField.text = userDefaults.object(forKey: "LastName") as? String
+        ageTextField.text = userDefaults.object(forKey: "Age") as? String
+        
+        
+        
     }
     
     @IBAction func saveButtonWasPressed(_ sender: UIButton) {
+        
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(firstNameTextField.text, forKey: "FirstName")
+        userDefaults.set(lastNameTextField.text, forKey: "LastName")
+        userDefaults.set(ageTextField.text, forKey: "Age")
+        userDefaults.synchronize()
+        
+        
         
     }
     
