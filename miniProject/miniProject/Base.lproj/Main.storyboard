@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="miniProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="miniProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -79,7 +79,7 @@
         <!--Second View Controller-->
         <scene sceneID="ZY3-jE-FvO">
             <objects>
-                <viewController id="5VE-vq-oGo" customClass="SecondViewController" customModule="miniProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="5VE-vq-oGo" customClass="SecondViewController" customModule="miniProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pzd-q9-Km3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,8 +119,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="FastCampus_Logo-2" width="172" height="38"/>
-        <image name="classroom" width="768" height="547"/>
+        <image name="FastCampus_Logo-2" width="345" height="76"/>
+        <image name="classroom" width="368.6400146484375" height="262.55999755859375"/>
         <image name="passwordIcon" width="22" height="28"/>
         <image name="userIcon" width="28" height="28"/>
     </resources>

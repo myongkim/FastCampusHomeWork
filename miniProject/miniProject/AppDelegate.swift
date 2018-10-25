@@ -20,23 +20,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let savedID = userDefault.object(forKey: "userID")
         let savedPW = userDefault.object(forKey: "userPassword")
         
-        guard let castedSavedID = savedID as? String,
-              let castedSavedPW = savedPW as? String
-                else { throws }
-        
-
-        
-        
-        if castedSavedID == "myongkim" && castedSavedPW == "12345" {
-            
-            
-            window?.rootViewController = ViewController()
+        if let castedSavedID = savedID as? String,
+            let castedSavedPW = savedPW as? String {
+            let storybaord = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storybaord.instantiateViewController(withIdentifier: "SecondViewController")
+            window?.rootViewController = viewController
             window?.makeKeyAndVisible()
         } else {
-            window?.rootViewController = SecondViewController()
+            let storybaord = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storybaord.instantiateViewController(withIdentifier: "ViewController")
+            window?.rootViewController = viewController
             window?.makeKeyAndVisible()
             
         }
+        
+        
+ 
+        
+        
+//        if castedSavedID == "myongkim" && castedSavedPW == "12345" {
+//
+//
+//            window?.rootViewController = ViewController()
+//            window?.makeKeyAndVisible()
+//        } else {
+//            window?.rootViewController = SecondViewController()
+//            window?.makeKeyAndVisible()
+//
+//        }
         
         
       
