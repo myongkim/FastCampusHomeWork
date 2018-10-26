@@ -14,11 +14,11 @@ extension Notification.Name{
     
 }
 
-
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var colorDisplay: UIView!
     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +31,8 @@ class FirstViewController: UIViewController {
         
         
         print(sender)
-       
+        // getting data from NOtificationCenter to Notification
+        // sender.UserInfo gets the data, gets the optional Data to optional Binding. 
         guard let colorData = sender.userInfo as? [ String : CGFloat],
               let red = colorData["red"],
               let green = colorData["green"],
@@ -46,5 +47,7 @@ class FirstViewController: UIViewController {
         
     }
     
+    
+
 }
 
