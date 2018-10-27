@@ -23,6 +23,7 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var loginIDText: UITextField!
     @IBOutlet weak var logInPasswordText: UITextField!
+    let segueIdentifierForLogIn = "logIn"
   
     
     
@@ -32,23 +33,32 @@ class LogInViewController: UIViewController {
       
     }
 
+    // Mark: Perform Login button, if criteria has been met
     @IBAction func buttonDidTapLogIn(_ sender: UIButton) {
-        guard let logInID = loginIDText.text else { return }
-        guard let logInPW = logInPasswordText.text else { return }
+        guard let logInID = loginIDText.text,
+              let logInPW = logInPasswordText.text
+            else { return }
         
         let logInInfo = LogIn(id: logInID, pw: logInPW)
-        print(logInInfo)
+       
         
-        
+        if logInID == "myongkim" && logInPW == "m0000" {
+            
+            performSegue(withIdentifier: segueIdentifierForLogIn, sender: sender)
+            
+            
+        } else {
+            print(logInInfo)
+        }
         
         
         
     }
-    
-    @IBAction func buttonDidTapSignUP(_ sender: UIButton) {
-        
+    // Mark: SignUP Page
+    @IBAction func buttonDidTapSignUP(_ sender: UIButton){
     }
     
+    // Mark: unwind from Signup Page to login Page
     @IBAction func unwindToLogInViewController(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         
     }

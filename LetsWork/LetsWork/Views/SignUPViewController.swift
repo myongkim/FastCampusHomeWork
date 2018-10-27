@@ -16,6 +16,7 @@ class SignUPViewController: UIViewController {
     @IBOutlet weak var retypePassword: UITextField!
     
     let message = "Please retype the password"
+    let segueIdentifierForSignUp = "signup"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +44,16 @@ class SignUPViewController: UIViewController {
             let alertController = UIAlertController(title: "Password Does not Match", message: message, preferredStyle: .alert)
             let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
            
+            print(savedInitialPW)
+            print(savedretypePW)
+            
             
             alertController.addAction(dismiss)
             present(alertController, animated: true)
-          }
+            
+        } else {
+            performSegue(withIdentifier: segueIdentifierForSignUp, sender: sender)
+        }
         
         
     }
