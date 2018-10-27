@@ -24,25 +24,29 @@ class SignUPViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: UIButton) {
-        let savedFirstName = firstName.text
-        let savedLastName = lastName.text
-        let savedInitialPW = initialPassword.text
-        let savedretypePW = retypePassword.text
+        guard let savedFirstName = firstName.text,
+            let savedLastName = lastName.text,
+            let savedInitialPW = initialPassword.text,
+            let savedretypePW = retypePassword.text
+            else {return}
         
+        
+        
+        
+        
+        // Mark: make the data that put into a dictionary.
+//        let userData [String:[:]] = []
         
         if savedInitialPW != savedretypePW {
+            
+            // mark: make a alertView when the password does not match
             let alertController = UIAlertController(title: "Password Does not Match", message: message, preferredStyle: .alert)
             let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
-            
+           
             
             alertController.addAction(dismiss)
             present(alertController, animated: true)
-            
-            
-            
-            
-            
-        }
+          }
         
         
     }
