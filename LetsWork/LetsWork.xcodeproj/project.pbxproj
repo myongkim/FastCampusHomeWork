@@ -37,6 +37,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A08FC7421853850002398C0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A9081DD21841BD100CD5FF3 /* SignUPViewController.swift */,
+				6A9081CD21841AD400CD5FF3 /* LogInViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6A08FC7521853885002398C0 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		6A9081BF21841AD400CD5FF3 = {
 			isa = PBXGroup;
 			children = (
@@ -56,8 +72,10 @@
 		6A9081CA21841AD400CD5FF3 /* LetsWork */ = {
 			isa = PBXGroup;
 			children = (
-				6A9081CB21841AD400CD5FF3 /* AppDelegate.swift */,
 				6A9081DF21841BE200CD5FF3 /* Views */,
+				6A08FC7421853850002398C0 /* Controller */,
+				6A08FC7521853885002398C0 /* model */,
+				6A9081CB21841AD400CD5FF3 /* AppDelegate.swift */,
 				6A9081D221841AD500CD5FF3 /* Assets.xcassets */,
 				6A9081D421841AD500CD5FF3 /* LaunchScreen.storyboard */,
 				6A9081D721841AD500CD5FF3 /* Info.plist */,
@@ -69,8 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				6A9081CF21841AD400CD5FF3 /* Main.storyboard */,
-				6A9081CD21841AD400CD5FF3 /* LogInViewController.swift */,
-				6A9081DD21841BD100CD5FF3 /* SignUPViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

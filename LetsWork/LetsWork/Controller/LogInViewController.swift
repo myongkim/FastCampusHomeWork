@@ -8,15 +8,13 @@
 
 import UIKit
 
-struct LogIn {
+struct LoginInfo {
     var id: String
     var pw: String
- 
-//    init(id: String, pw: String) {
-//        self.id = id
-//        self.pw = pw
-//    }
+    
 }
+
+
 
 class LogInViewController: UIViewController {
 
@@ -39,7 +37,7 @@ class LogInViewController: UIViewController {
               let logInPW = logInPasswordText.text
             else { return }
         
-        let logInInfo = LogIn(id: logInID, pw: logInPW)
+        let logInInfo = LoginInfo(id: logInID, pw: logInPW)
        
         
         if logInID == "myongkim" && logInPW == "m0000" {
