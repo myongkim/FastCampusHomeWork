@@ -60,5 +60,22 @@ class LogInViewController: UIViewController {
     @IBAction func unwindToLogInViewController(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
         
     }
+    
+    
+    @IBOutlet weak var picker: UIPickerView!
+    
 }
-
+extension  LogInViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 2
+    }
+    
+    
+    
+    
+}
