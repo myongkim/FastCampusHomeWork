@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Desert</key>
+	<array>
+		<string>cake</string>
+		<string>gingerbread</string>
+		<string>ice cream</string>
+		<string>pumpkin pie</string>
+	</array>
+	<key>Main Menu</key>
+	<array>
+		<string>Sweet and sour Port</string>
+		<string>starch sheet</string>
+		<string>Creammy Canned shrimp</string>
+	</array>
+	<key>Appitizer</key>
+	<array>
+		<string>Fried Rice</string>
+		<string>Jajangmyeon</string>
+	</array>
+</dict>
+</plist>
