@@ -62,12 +62,17 @@ class LogInViewController: UIViewController {
     }
     
     
+    
+    
     @IBOutlet weak var picker: UIPickerView!
+    
     
 }
 extension  LogInViewController: UIPickerViewDataSource {
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
+        
         
     }
     
