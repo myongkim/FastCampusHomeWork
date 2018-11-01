@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         print(touchNumber)
         countGesture.text = "\(touchNumber)"
         
-        let location = sender.location(in: self.view)
+        let location = sender.location(in: view)
          print("location  : ",location)
         coordinateGesture.text = "\(location)"
         
@@ -46,6 +46,8 @@ class ViewController: UIViewController {
         
         touchNumber = 0
         countGesture.text = "\(touchNumber)"
+        coordinateGesture.text = "(000, 000)"
+        
     }
     
     
