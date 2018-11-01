@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A06100F2186E72D0096E254 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A06100E2186E72D0096E254 /* AppDelegate.swift */; };
-		6A0610112186E72D0096E254 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0610102186E72D0096E254 /* ViewController.swift */; };
-		6A0610142186E72D0096E254 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A0610122186E72D0096E254 /* Main.storyboard */; };
-		6A0610162186E72F0096E254 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0610152186E72F0096E254 /* Assets.xcassets */; };
-		6A0610192186E72F0096E254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A0610172186E72F0096E254 /* LaunchScreen.storyboard */; };
-		6A0610212186E75A0096E254 /* idolList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A0610202186E75A0096E254 /* idolList.plist */; };
+		6A4AD0D5218A98A600E509A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD0D4218A98A600E509A8 /* AppDelegate.swift */; };
+		6A4AD0DA218A98A600E509A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A4AD0D8218A98A600E509A8 /* Main.storyboard */; };
+		6A4AD0DC218A98A800E509A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A4AD0DB218A98A800E509A8 /* Assets.xcassets */; };
+		6A4AD0DF218A98A800E509A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A4AD0DD218A98A800E509A8 /* LaunchScreen.storyboard */; };
+		6A4AD0E7218A98FC00E509A8 /* TouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD0E6218A98FC00E509A8 /* TouchViewController.swift */; };
+		6A4AD0E9218A990A00E509A8 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4AD0E8218A990A00E509A8 /* GestureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6A06100B2186E72D0096E254 /* FileManagerPList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileManagerPList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A06100E2186E72D0096E254 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A0610102186E72D0096E254 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6A0610132186E72D0096E254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6A0610152186E72F0096E254 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6A0610182186E72F0096E254 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6A06101A2186E72F0096E254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A0610202186E75A0096E254 /* idolList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = idolList.plist; sourceTree = "<group>"; };
+		6A4AD0D1218A98A600E509A8 /* UIGuestureRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIGuestureRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4AD0D4218A98A600E509A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6A4AD0D9218A98A600E509A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6A4AD0DB218A98A800E509A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6A4AD0DE218A98A800E509A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6A4AD0E0218A98A800E509A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A4AD0E6218A98FC00E509A8 /* TouchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchViewController.swift; sourceTree = "<group>"; };
+		6A4AD0E8218A990A00E509A8 /* GestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6A0610082186E72D0096E254 /* Frameworks */ = {
+		6A4AD0CE218A98A600E509A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A0610022186E72D0096E254 = {
+		6A4AD0C8218A98A600E509A8 = {
 			isa = PBXGroup;
 			children = (
-				6A06100D2186E72D0096E254 /* FileManagerPList */,
-				6A06100C2186E72D0096E254 /* Products */,
+				6A4AD0D3218A98A600E509A8 /* UIGuestureRecognizer */,
+				6A4AD0D2218A98A600E509A8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6A06100C2186E72D0096E254 /* Products */ = {
+		6A4AD0D2218A98A600E509A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A06100B2186E72D0096E254 /* FileManagerPList.app */,
+				6A4AD0D1218A98A600E509A8 /* UIGuestureRecognizer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6A06100D2186E72D0096E254 /* FileManagerPList */ = {
+		6A4AD0D3218A98A600E509A8 /* UIGuestureRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				6A06100E2186E72D0096E254 /* AppDelegate.swift */,
-				6A0610102186E72D0096E254 /* ViewController.swift */,
-				6A0610122186E72D0096E254 /* Main.storyboard */,
-				6A0610152186E72F0096E254 /* Assets.xcassets */,
-				6A0610172186E72F0096E254 /* LaunchScreen.storyboard */,
-				6A06101A2186E72F0096E254 /* Info.plist */,
-				6A0610202186E75A0096E254 /* idolList.plist */,
+				6A4AD0D4218A98A600E509A8 /* AppDelegate.swift */,
+				6A4AD0E6218A98FC00E509A8 /* TouchViewController.swift */,
+				6A4AD0E8218A990A00E509A8 /* GestureViewController.swift */,
+				6A4AD0D8218A98A600E509A8 /* Main.storyboard */,
+				6A4AD0DB218A98A800E509A8 /* Assets.xcassets */,
+				6A4AD0DD218A98A800E509A8 /* LaunchScreen.storyboard */,
+				6A4AD0E0218A98A800E509A8 /* Info.plist */,
 			);
-			path = FileManagerPList;
+			path = UIGuestureRecognizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A06100A2186E72D0096E254 /* FileManagerPList */ = {
+		6A4AD0D0218A98A600E509A8 /* UIGuestureRecognizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A06101D2186E72F0096E254 /* Build configuration list for PBXNativeTarget "FileManagerPList" */;
+			buildConfigurationList = 6A4AD0E3218A98A800E509A8 /* Build configuration list for PBXNativeTarget "UIGuestureRecognizer" */;
 			buildPhases = (
-				6A0610072186E72D0096E254 /* Sources */,
-				6A0610082186E72D0096E254 /* Frameworks */,
-				6A0610092186E72D0096E254 /* Resources */,
+				6A4AD0CD218A98A600E509A8 /* Sources */,
+				6A4AD0CE218A98A600E509A8 /* Frameworks */,
+				6A4AD0CF218A98A600E509A8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FileManagerPList;
-			productName = FileManagerPList;
-			productReference = 6A06100B2186E72D0096E254 /* FileManagerPList.app */;
+			name = UIGuestureRecognizer;
+			productName = UIGuestureRecognizer;
+			productReference = 6A4AD0D1218A98A600E509A8 /* UIGuestureRecognizer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6A0610032186E72D0096E254 /* Project object */ = {
+		6A4AD0C9218A98A600E509A8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Isaac Kim";
 				TargetAttributes = {
-					6A06100A2186E72D0096E254 = {
+					6A4AD0D0218A98A600E509A8 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
-			buildConfigurationList = 6A0610062186E72D0096E254 /* Build configuration list for PBXProject "FileManagerPList" */;
+			buildConfigurationList = 6A4AD0CC218A98A600E509A8 /* Build configuration list for PBXProject "UIGuestureRecognizer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 6A0610022186E72D0096E254;
-			productRefGroup = 6A06100C2186E72D0096E254 /* Products */;
+			mainGroup = 6A4AD0C8218A98A600E509A8;
+			productRefGroup = 6A4AD0D2218A98A600E509A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A06100A2186E72D0096E254 /* FileManagerPList */,
+				6A4AD0D0218A98A600E509A8 /* UIGuestureRecognizer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6A0610092186E72D0096E254 /* Resources */ = {
+		6A4AD0CF218A98A600E509A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A0610212186E75A0096E254 /* idolList.plist in Resources */,
-				6A0610192186E72F0096E254 /* LaunchScreen.storyboard in Resources */,
-				6A0610162186E72F0096E254 /* Assets.xcassets in Resources */,
-				6A0610142186E72D0096E254 /* Main.storyboard in Resources */,
+				6A4AD0DF218A98A800E509A8 /* LaunchScreen.storyboard in Resources */,
+				6A4AD0DC218A98A800E509A8 /* Assets.xcassets in Resources */,
+				6A4AD0DA218A98A600E509A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6A0610072186E72D0096E254 /* Sources */ = {
+		6A4AD0CD218A98A600E509A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A0610112186E72D0096E254 /* ViewController.swift in Sources */,
-				6A06100F2186E72D0096E254 /* AppDelegate.swift in Sources */,
+				6A4AD0E9218A990A00E509A8 /* GestureViewController.swift in Sources */,
+				6A4AD0D5218A98A600E509A8 /* AppDelegate.swift in Sources */,
+				6A4AD0E7218A98FC00E509A8 /* TouchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6A0610122186E72D0096E254 /* Main.storyboard */ = {
+		6A4AD0D8218A98A600E509A8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6A0610132186E72D0096E254 /* Base */,
+				6A4AD0D9218A98A600E509A8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6A0610172186E72F0096E254 /* LaunchScreen.storyboard */ = {
+		6A4AD0DD218A98A800E509A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6A0610182186E72F0096E254 /* Base */,
+				6A4AD0DE218A98A800E509A8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6A06101B2186E72F0096E254 /* Debug */ = {
+		6A4AD0E1218A98A800E509A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		6A06101C2186E72F0096E254 /* Release */ = {
+		6A4AD0E2218A98A800E509A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,36 +282,36 @@
 			};
 			name = Release;
 		};
-		6A06101E2186E72F0096E254 /* Debug */ = {
+		6A4AD0E4218A98A800E509A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4MM77V7NH;
-				INFOPLIST_FILE = FileManagerPList/Info.plist;
+				INFOPLIST_FILE = UIGuestureRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = FastCampus.FileManagerPList;
+				PRODUCT_BUNDLE_IDENTIFIER = FastCampus.UIGuestureRecognizer.Isaac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6A06101F2186E72F0096E254 /* Release */ = {
+		6A4AD0E5218A98A800E509A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4MM77V7NH;
-				INFOPLIST_FILE = FileManagerPList/Info.plist;
+				INFOPLIST_FILE = UIGuestureRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = FastCampus.FileManagerPList;
+				PRODUCT_BUNDLE_IDENTIFIER = FastCampus.UIGuestureRecognizer.Isaac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,25 +321,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6A0610062186E72D0096E254 /* Build configuration list for PBXProject "FileManagerPList" */ = {
+		6A4AD0CC218A98A600E509A8 /* Build configuration list for PBXProject "UIGuestureRecognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A06101B2186E72F0096E254 /* Debug */,
-				6A06101C2186E72F0096E254 /* Release */,
+				6A4AD0E1218A98A800E509A8 /* Debug */,
+				6A4AD0E2218A98A800E509A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A06101D2186E72F0096E254 /* Build configuration list for PBXNativeTarget "FileManagerPList" */ = {
+		6A4AD0E3218A98A800E509A8 /* Build configuration list for PBXNativeTarget "UIGuestureRecognizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A06101E2186E72F0096E254 /* Debug */,
-				6A06101F2186E72F0096E254 /* Release */,
+				6A4AD0E4218A98A800E509A8 /* Debug */,
+				6A4AD0E5218A98A800E509A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6A0610032186E72D0096E254 /* Project object */;
+	rootObject = 6A4AD0C9218A98A600E509A8 /* Project object */;
 }

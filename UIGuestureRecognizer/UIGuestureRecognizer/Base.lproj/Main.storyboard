@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3g-k5-v0m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Touch-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TouchViewController" customModule="UIGuestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat1" translatesAutoresizingMaskIntoConstraints="NO" id="5tL-La-ySO">
+                                <rect key="frame" x="75" y="221" width="150" height="150"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5tL-La-ySO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-37.5" id="IBm-fZ-r3q"/>
+                            <constraint firstItem="5tL-La-ySO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-37.5" id="Uc2-qZ-7j4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Touch" id="gCk-MP-18J"/>
+                    <connections>
+                        <outlet property="imageView" destination="5tL-La-ySO" id="We4-35-IAb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970" y="-291"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="heg-ep-UQT">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="h3g-k5-v0m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IsW-6x-qMj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ufo-St-9xB"/>
+                        <segue destination="dED-qG-qpX" kind="relationship" relationship="viewControllers" id="rSI-4G-HF3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G7a-1T-YcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Gesture-->
+        <scene sceneID="HnL-3V-9zT">
+            <objects>
+                <viewController id="dED-qG-qpX" customClass="GestureViewController" customModule="UIGuestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mr5-1E-Wsv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="cat2" translatesAutoresizingMaskIntoConstraints="NO" id="4O9-g0-a64">
+                                <rect key="frame" x="112" y="258" width="150" height="150"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="4O9-g0-a64" firstAttribute="centerX" secondItem="mr5-1E-Wsv" secondAttribute="centerX" id="5TP-IC-j9T"/>
+                            <constraint firstItem="4O9-g0-a64" firstAttribute="centerY" secondItem="mr5-1E-Wsv" secondAttribute="centerY" id="waY-dl-W2e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aXT-9M-KkO"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="79w-pb-WGy" appends="YES" id="F4Z-pH-Pop"/>
+                            <outletCollection property="gestureRecognizers" destination="kV1-op-U3e" appends="YES" id="InA-rU-Dmv"/>
+                            <outletCollection property="gestureRecognizers" destination="ukh-zh-Yft" appends="YES" id="Bgv-9n-e94"/>
+                            <outletCollection property="gestureRecognizers" destination="RN7-qQ-foe" appends="YES" id="xBu-Fv-MC1"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Gesture" id="5WM-KY-lXH"/>
+                    <connections>
+                        <outlet property="imageView" destination="4O9-g0-a64" id="eid-JA-cVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muq-lN-dRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="79w-pb-WGy">
+                    <connections>
+                        <action selector="handleTapGuesture:" destination="dED-qG-qpX" id="XQ6-6P-V9z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <rotationGestureRecognizer id="kV1-op-U3e">
+                    <connections>
+                        <action selector="handleRotationGesture:" destination="dED-qG-qpX" id="p2c-o8-vtM"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="ukh-zh-Yft">
+                    <connections>
+                        <action selector="swipe:" destination="dED-qG-qpX" id="3d9-AE-lap"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="RN7-qQ-foe">
+                    <connections>
+                        <action selector="swipe:" destination="dED-qG-qpX" id="tFy-Dt-iGM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="969" y="368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat1" width="225" height="225"/>
+        <image name="cat2" width="225" height="225"/>
+    </resources>
+</document>
