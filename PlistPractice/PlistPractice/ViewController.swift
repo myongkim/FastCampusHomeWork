@@ -53,7 +53,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = String(data[keyData[indexPath.section]]![indexPath.row])
+        cell.textLabel?.text = data[keyData[indexPath.section]]![indexPath.row]
         
         return cell
     }
