@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UIViewController {
+class TableViewController1: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var items = [DataItem]()
     var otherItems = [DataItem]()
@@ -77,7 +77,7 @@ class TableViewController: UIViewController {
     
 }
 
-extension TableViewController: UITableViewDataSource {
+extension TableViewController1: UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section #\(section)"
     }
@@ -169,7 +169,7 @@ extension TableViewController: UITableViewDataSource {
     
 }
 
-extension TableViewController: UITableViewDelegate {
+extension TableViewController1: UITableViewDelegate {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         let sectionItems = allItems[indexPath.section]
         if indexPath.row >= sectionItems.count {
