@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Speed</key>
+		<string>28.6</string>
+		<key>Country</key>
+		<string>South Korea</string>
+	</dict>
+	<dict>
+		<key>Speed</key>
+		<string>23.5</string>
+		<key>Country</key>
+		<string>Norway</string>
+	</dict>
+	<dict>
+		<key>Speed</key>
+		<string>22.5</string>
+		<key>Country</key>
+		<string>Swedden</string>
+	</dict>
+	<dict>
+		<key>Speed</key>
+		<string>21.9</string>
+		<key>Country</key>
+		<string>Hong Kong</string>
+	</dict>
+	<dict>
+		<key>Speed</key>
+		<string>21.7</string>
+		<key>Country</key>
+		<string>Switzerland</string>
+	</dict>
+	<dict>
+		<key>Speed</key>
+		<string>20.5</string>
+		<key>Country</key>
+		<string>Finland</string>
+	</dict>
+</array>
+</plist>

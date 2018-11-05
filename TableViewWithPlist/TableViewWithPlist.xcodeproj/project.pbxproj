@@ -13,6 +13,10 @@
 		6A03743F218EB6C20021D1C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A03743E218EB6C20021D1C6 /* Assets.xcassets */; };
 		6A037442218EB6C20021D1C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A037440218EB6C20021D1C6 /* LaunchScreen.storyboard */; };
 		6A03744A218EB7D70021D1C6 /* CountryInternetSpeed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A037449218EB7D70021D1C6 /* CountryInternetSpeed.plist */; };
+		6AFA238D21900D2100BDB221 /* CountryPolulation.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA238C21900D2100BDB221 /* CountryPolulation.plist */; };
+		6AFA238F21900D3000BDB221 /* CombineData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA238E21900D3000BDB221 /* CombineData.plist */; };
+		6AFA23912190136500BDB221 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA23902190136500BDB221 /* CountryInfo.swift */; };
+		6AFA23932190185F00BDB221 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA23922190185F00BDB221 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		6A037441218EB6C20021D1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A037443218EB6C20021D1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A037449218EB7D70021D1C6 /* CountryInternetSpeed.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CountryInternetSpeed.plist; sourceTree = "<group>"; };
+		6AFA238C21900D2100BDB221 /* CountryPolulation.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CountryPolulation.plist; sourceTree = "<group>"; };
+		6AFA238E21900D3000BDB221 /* CombineData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CombineData.plist; sourceTree = "<group>"; };
+		6AFA23902190136500BDB221 /* CountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
+		6AFA23922190185F00BDB221 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +65,26 @@
 			isa = PBXGroup;
 			children = (
 				6A037437218EB6C10021D1C6 /* AppDelegate.swift */,
+				6AFA23902190136500BDB221 /* CountryInfo.swift */,
 				6A037439218EB6C10021D1C6 /* ViewController.swift */,
 				6A03743B218EB6C10021D1C6 /* Main.storyboard */,
+				6AFA23922190185F00BDB221 /* CustomTableViewCell.swift */,
 				6A03743E218EB6C20021D1C6 /* Assets.xcassets */,
 				6A037440218EB6C20021D1C6 /* LaunchScreen.storyboard */,
 				6A037443218EB6C20021D1C6 /* Info.plist */,
-				6A037449218EB7D70021D1C6 /* CountryInternetSpeed.plist */,
+				6AFA238B2190079E00BDB221 /* Plist */,
 			);
 			path = TableViewWithPlist;
+			sourceTree = "<group>";
+		};
+		6AFA238B2190079E00BDB221 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				6A037449218EB7D70021D1C6 /* CountryInternetSpeed.plist */,
+				6AFA238C21900D2100BDB221 /* CountryPolulation.plist */,
+				6AFA238E21900D3000BDB221 /* CombineData.plist */,
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +145,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AFA238D21900D2100BDB221 /* CountryPolulation.plist in Resources */,
 				6A037442218EB6C20021D1C6 /* LaunchScreen.storyboard in Resources */,
+				6AFA238F21900D3000BDB221 /* CombineData.plist in Resources */,
 				6A03743F218EB6C20021D1C6 /* Assets.xcassets in Resources */,
 				6A03744A218EB7D70021D1C6 /* CountryInternetSpeed.plist in Resources */,
 				6A03743D218EB6C10021D1C6 /* Main.storyboard in Resources */,
@@ -141,6 +163,8 @@
 			files = (
 				6A03743A218EB6C10021D1C6 /* ViewController.swift in Sources */,
 				6A037438218EB6C10021D1C6 /* AppDelegate.swift in Sources */,
+				6AFA23932190185F00BDB221 /* CustomTableViewCell.swift in Sources */,
+				6AFA23912190136500BDB221 /* CountryInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = TableViewWithPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -304,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
 				INFOPLIST_FILE = TableViewWithPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
