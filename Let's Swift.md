@@ -242,3 +242,36 @@ Uber Ribs is multi-platform architecture
 2. router, inteactor, builder, presenter, and view
 3. business logic determines the state tree
 
+
+
+### GraphQL over Rest
+
+#### The evolution of API Design
+
+
+
+#### API
+
+
+
+### Apple Employee in South Korea
+
+
+
+MDM - mobile device management.
+
+It is driven to B2B to use the mobile device and control the device by company.
+
+
+
+It allows to install and block the app by the user. 
+
+- 0 touch deployment. 
+
+- cannot delete the apps
+- cannot install certain apps
+- do not need apple id to install
+- 
+
+
+
