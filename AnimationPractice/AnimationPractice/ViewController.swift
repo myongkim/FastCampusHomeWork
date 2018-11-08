@@ -42,12 +42,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         
     button1Cordinate = button1.center
     button2Cordinate = button2.center
     button3Cordinate = button3.center
     button4Cordinate = button4.center
-        
+
         
     button0.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
     button0.layer.cornerRadius = button0.frame.width / 2

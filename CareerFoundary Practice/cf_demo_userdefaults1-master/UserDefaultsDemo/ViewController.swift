@@ -16,14 +16,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         let userDefaults = UserDefaults.standard
         firstNameTextField.text = userDefaults.object(forKey: "FirstName") as? String
         lastNameTextField.text = userDefaults.object(forKey: "LastName") as? String
         ageTextField.text = userDefaults.object(forKey: "Age") as? String
         
-        
-        
+       
     }
     
     @IBAction func saveButtonWasPressed(_ sender: UIButton) {
@@ -32,9 +35,9 @@ class ViewController: UIViewController {
         userDefaults.set(firstNameTextField.text, forKey: "FirstName")
         userDefaults.set(lastNameTextField.text, forKey: "LastName")
         userDefaults.set(ageTextField.text, forKey: "Age")
+        
+        // this is optional
         userDefaults.synchronize()
-        
-        
         
     }
     
