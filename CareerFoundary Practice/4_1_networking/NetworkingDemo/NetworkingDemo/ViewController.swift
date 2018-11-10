@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       getWeatherData(urlString:"http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=42dcff9f813d906a176b35b9f9d51796")
+       getWeatherData(urlString:"http://api.openweathermap.org/data/2.5/weather?q=appid=eaeb29ad384e42896d818deff8432dfa")
         
     }
 
@@ -24,24 +24,33 @@ class ViewController: UIViewController {
         
         if let city = cityNameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) {
             if let encodedString = city.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) {
-                getWeatherData(urlString: "http://api.openweathermap.org/data/2.5/weather?q=\(encodedString)&appid=42dcff9f813d906a176b35b9f9d51796")
+                getWeatherData(urlString: "http://api.openweathermap.org/data/2.5/weather?q=\(encodedString)&appid=eaeb29ad384e42896d818deff8432dfa")
             }
         }
     }
     
     //getting WeatherData
     func getWeatherData(urlString: String) {
-        let url = URL(string: urlString)
+        guard let url = URL(string: urlString) else { return }
         
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            DispatchQueue.main.async(execute: {
-                self.setLabel(weatherData: data!)
-            })
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            
+            if error  != nil {
+                self.errorMessageAlert("Unable to obtain URL. Check network connection and try again")
+                return
+            }
+            else if let data = data
+            {
+                DispatchQueue.main.async(execute: {self.setLabel(weatherData: data)})
+            }
         }
-        
         task.resume()
         
     }
+        
+    
+        
+    
     
     
     func setLabel(weatherData: Data) {
@@ -55,15 +64,29 @@ class ViewController: UIViewController {
                 }
             }
         } catch {
-            print("error feching data")
+            print("Error feching data")
             
         }
         
         
         
     }
+    
+    func errorMessageAlert(_ message: String){
+        
+        let alertController = UIAlertController(title: "Coonection Error", message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alertController.addAction(okButton)
+        
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true, completion: nil)}
+    }
+        
+        
+}
 
     
     
-}
+
 
