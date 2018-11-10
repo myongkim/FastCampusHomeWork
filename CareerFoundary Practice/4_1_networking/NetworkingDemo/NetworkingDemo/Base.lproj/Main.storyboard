@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NetworkingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZF-HB-ViB">
+                                <rect key="frame" x="50" y="166" width="275" height="30"/>
+                                <state key="normal" title="Get Temp"/>
+                                <connections>
+                                    <action selector="getTempButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pkm-IT-U0y"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LfZ-X1-cCw">
+                                <rect key="frame" x="50" y="106" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPf-8s-ZCh">
+                                <rect key="frame" x="50" y="231" width="275" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rPf-8s-ZCh" secondAttribute="trailing" constant="50" id="1w0-TK-YDL"/>
+                            <constraint firstItem="gZF-HB-ViB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2td-cK-kw0"/>
+                            <constraint firstItem="LfZ-X1-cCw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="GxX-sj-RFQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gZF-HB-ViB" secondAttribute="trailing" constant="50" id="QBF-to-SzE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LfZ-X1-cCw" secondAttribute="trailing" constant="50" id="SZq-IJ-mLm"/>
+                            <constraint firstItem="LfZ-X1-cCw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-222.5" id="W2d-Nc-LZG"/>
+                            <constraint firstItem="gZF-HB-ViB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="XdX-yx-1dE"/>
+                            <constraint firstItem="rPf-8s-ZCh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cSu-qd-T8U"/>
+                            <constraint firstItem="gZF-HB-ViB" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-162.5" id="ds8-fm-dVQ"/>
+                            <constraint firstItem="LfZ-X1-cCw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eXm-S8-u5r"/>
+                            <constraint firstItem="rPf-8s-ZCh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hcF-vw-jnm"/>
+                            <constraint firstItem="rPf-8s-ZCh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-102.5" id="r4T-av-K55"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameTextField" destination="LfZ-X1-cCw" id="fPz-Ot-IG0"/>
+                        <outlet property="temperatureLabel" destination="eXm-S8-u5r" id="6Gw-GU-gWi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
