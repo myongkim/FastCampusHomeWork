@@ -42,9 +42,9 @@ class DataModel {
     func save() {
         userDefault.set(descriptionText, forKey: DefaultParameterNames.descriptionField)
         userDefault.set(teamList[0], forKey: DefaultParameterNames.playerName1)
-        userDefault.set(teamList[1], forKey: DefaultParameterNames.playerName1)
-        userDefault.set(teamList[2], forKey: DefaultParameterNames.playerName1)
-        userDefault.set(teamList[3], forKey: DefaultParameterNames.playerName1)
+        userDefault.set(teamList[1], forKey: DefaultParameterNames.playerName2)
+        userDefault.set(teamList[2], forKey: DefaultParameterNames.playerName3)
+        userDefault.set(teamList[3], forKey: DefaultParameterNames.playerName4)
     }
     
 }

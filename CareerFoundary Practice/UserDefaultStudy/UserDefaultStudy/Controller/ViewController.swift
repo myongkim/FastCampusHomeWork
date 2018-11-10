@@ -18,11 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var playerName4: UITextField!
     @IBOutlet weak var teamDescription: UITextView!
     
+    let dataModel = DataModel.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DataModel.sharedInstance.load()
+        
     
         
         
@@ -57,9 +58,6 @@ class ViewController: UIViewController {
     
     
     @IBAction func savedPlayerInfo(_ sender: UIButton) {
-        
-        let dataModel = DataModel.sharedInstance
-        
         dataModel.descriptionText = teamDescription.text
         dataModel.teamList[0] = playerName1.text!
         dataModel.teamList[1] = playerName2.text!
@@ -67,32 +65,34 @@ class ViewController: UIViewController {
         dataModel.teamList[3] = playerName4.text!
         
         dataModel.save()
-        
-       
-        
-        
-        
-    }
+       }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       super.prepare(for: segue, sender: sender)
-        
-        guard let secondVC = segue.destination as? SecondViewController else { return }
-        
-        secondVC.longListText.text? = DataModel.DefaultParameterNames.descriptionField
-        secondVC.player1.text? = DataModel.DefaultParameterNames.playerName1
-        secondVC.player2.text? = DataModel.DefaultParameterNames.playerName2
-        secondVC.player3.text? = DataModel.DefaultParameterNames.playerName3
-        secondVC.player4.text? = DataModel.DefaultParameterNames.playerName4
-    }
-   
-    
+
     @IBAction func performSegue(_ sender: UIBarButtonItem) {
         performSegue(withIdentifier: "secondVC", sender: sender)
+    }
+    
+    @IBAction func resetValueToZero(_ sender: UIButton) {
+        teamDescription.text = ""
+        playerName1.text = ""
+        playerName2.text = ""
+        playerName3.text = ""
+        playerName4.text = ""
         
-       
+        dataModel.descriptionText = teamDescription.text
+        dataModel.teamList[0] = playerName1.text ?? ""
+        dataModel.teamList[1] = playerName2.text ?? ""
+        dataModel.teamList[2] = playerName3.text ?? ""
+        dataModel.teamList[3] = playerName4.text ?? ""
+        
+        dataModel.save()
+        
+        print("descriptiontest:",dataModel.descriptionText)
+        
+        
         
     }
+    
     
 
 }

@@ -15,22 +15,34 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var player4: UILabel!
     @IBOutlet weak var longListText: UILabel!
     
-    
+    let dataModel = DataModel.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+       dataModel.load()
+       loadData()
+       textLayout()
+        
    
-        
-    longListText.layer.borderWidth = 1
-    longListText.layer.cornerRadius = 20
-    longListText.layer.borderColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
-        
-
-        
-
     }
     
+    func loadData() {
+        longListText.text = dataModel.descriptionText
+        player1.text = dataModel.teamList[0]
+        player2.text = dataModel.teamList[1]
+        player3.text = dataModel.teamList[2]
+        player4.text = dataModel.teamList[3]
+    }
+    
+    func textLayout() {
+        
+        longListText.layer.borderWidth = 1
+        longListText.layer.cornerRadius = 20
+        longListText.layer.borderColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        
+    }
 
     
    
