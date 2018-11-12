@@ -57,7 +57,7 @@
                     </view>
                     <connections>
                         <outlet property="cityNameTextField" destination="LfZ-X1-cCw" id="fPz-Ot-IG0"/>
-                        <outlet property="temperatureLabel" destination="eXm-S8-u5r" id="6Gw-GU-gWi"/>
+                        <outlet property="temperatureLabel" destination="rPf-8s-ZCh" id="USB-4j-EX7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

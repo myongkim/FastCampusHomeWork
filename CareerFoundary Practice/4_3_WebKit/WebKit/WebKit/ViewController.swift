@@ -7,13 +7,11 @@
 //
 
 import UIKit
-import WebKit
-
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var search: UISearchBar!
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webView:
     override func viewDidLoad() {
         super.viewDidLoad()
         
