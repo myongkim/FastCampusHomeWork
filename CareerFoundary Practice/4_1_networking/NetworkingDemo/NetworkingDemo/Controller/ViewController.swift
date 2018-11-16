@@ -23,8 +23,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       getWeatherData(urlString:"http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=42dcff9f813d906a176b35b9f9d51796")
+//       getWeatherData(urlString:"http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=42dcff9f813d906a176b35b9f9d51796")
         
+       fetchNaverAPI(query: "apple")
     }
 
     @IBAction func getTempButtonTapped(_ sender: Any) {
@@ -34,6 +35,23 @@ class ViewController: UIViewController {
                 getWeatherData(urlString: "http://api.openweathermap.org/data/2.5/weather?q=\(encodedString)&appid=42dcff9f813d906a176b35b9f9d51796")
             }
         }
+    }
+    
+    private func fetchNaverAPI(query: String) {
+        let url = URL(string: "https://openapi.naver.com/v1/search/shop.json?query=\(query)")!
+        var request = URLRequest(url: url)
+        request.setValue("gXNHEbsr4g8csfZTGZCC", forHTTPHeaderField: "X-Naver-Client-Id")
+        request.setValue("257bAm0OmZ", forHTTPHeaderField: "X-Naver-Client-Secret")
+        
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+            guard error == nil else { return }
+            guard let data = data else { return }
+            
+            let shoppingList = try! JSONDecoder().decode(ShoppingList.self, from: data)
+            print(shoppingList.items)
+        })
+        
+        task.resume()
     }
     
     //getting WeatherData

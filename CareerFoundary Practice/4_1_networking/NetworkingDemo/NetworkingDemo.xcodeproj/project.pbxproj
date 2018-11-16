@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A5250E2219D5EDA00E2F796 /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5250E1219D5EDA00E2F796 /* ShoppingList.swift */; };
 		6A61A0DA21968926008DEA75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61A0D921968926008DEA75 /* AppDelegate.swift */; };
 		6A61A0DC21968926008DEA75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A61A0DB21968926008DEA75 /* ViewController.swift */; };
 		6A61A0DF21968926008DEA75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A61A0DD21968926008DEA75 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		62A17C7CAC14E9CF969F9D12 /* Pods-NetworkingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkingDemo/Pods-NetworkingDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6A5250E1219D5EDA00E2F796 /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
 		6A61A0D621968926008DEA75 /* NetworkingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A61A0D921968926008DEA75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A61A0DB21968926008DEA75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				6A818DDA2199930200A164BC /* Weather.swift */,
+				6A5250E1219D5EDA00E2F796 /* ShoppingList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A61A0DC21968926008DEA75 /* ViewController.swift in Sources */,
+				6A5250E2219D5EDA00E2F796 /* ShoppingList.swift in Sources */,
 				6A818DDB2199930200A164BC /* Weather.swift in Sources */,
 				6A61A0DA21968926008DEA75 /* AppDelegate.swift in Sources */,
 			);

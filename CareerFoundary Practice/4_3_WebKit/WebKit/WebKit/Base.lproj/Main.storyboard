@@ -39,6 +39,7 @@
                     <connections>
                         <outlet property="search" destination="t3S-H9-4m2" id="sc8-Jk-4Qy"/>
                         <outlet property="webView" destination="b7W-5N-LCa" id="hbd-pT-jeK"/>
+                        <outlet property="webview" destination="b7W-5N-LCa" id="gbs-Zu-hgf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
