@@ -12,10 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let loginViewController = "loginViewController"
+    let mainViewController = "mainViewController"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        initializeAPP()
         return true
     }
 
@@ -25,8 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        KOSession.handleDidEnterBackground()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -34,11 +35,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    KOSession.handleDidBecomeActive()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if KOSession.isKakaoAccountLoginCallback(url) {
+            return KOSession.handleOpen(url)
+        }
+        return false
+    }
+    
+    private func initializeAPP() {
+        setupSessionChangeNotification()
+        setupRootViewController()
+    }
+    
+    private func setupSessionChangeNotification() {
+        NotificationCenter.default.addObserver(forName: Notification.Name.KOSessionDidChange, object: nil, queue: .main) { (noti) in
+            guard let session = noti.object as? KOSession else { return }
+            session.isOpen() ? print("Login") : print("Logout")
+            self.setupRootViewController()
+        }
+    }
+    
+    private func setupRootViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = storyboard.instantiateInitialViewController() as? UINavigationController
+        
+        guard let unwrappedNavi = navigationController else { return }
+        
+        let storyboardID = KOSession.shared().isOpen() ? mainViewController : loginViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: storyboardID)
+        unwrappedNavi.viewControllers = [vc]
+        window?.rootViewController = unwrappedNavi
+        
+        
     }
 
 

@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		6A6DB92A21AA774D008D8FF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DB92921AA774D008D8FF4 /* AppDelegate.swift */; };
-		6A6DB92C21AA774D008D8FF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DB92B21AA774D008D8FF4 /* ViewController.swift */; };
+		6A6DB92C21AA774D008D8FF4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DB92B21AA774D008D8FF4 /* LoginViewController.swift */; };
 		6A6DB92F21AA774D008D8FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DB92D21AA774D008D8FF4 /* Main.storyboard */; };
 		6A6DB93121AA7750008D8FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DB93021AA7750008D8FF4 /* Assets.xcassets */; };
 		6A6DB93421AA7750008D8FF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6DB93221AA7750008D8FF4 /* LaunchScreen.storyboard */; };
 		6A6DB93D21AA78CA008D8FF4 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6DB93C21AA78CA008D8FF4 /* KakaoOpenSDK.framework */; };
+		6A6DB94321AA806C008D8FF4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6DB94221AA806C008D8FF4 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A6DB92621AA774D008D8FF4 /* KakaoTalk_LogIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KakaoTalk_LogIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6DB92921AA774D008D8FF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6A6DB92B21AA774D008D8FF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A6DB92B21AA774D008D8FF4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6A6DB92E21AA774D008D8FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A6DB93021AA7750008D8FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A6DB93321AA7750008D8FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A6DB93521AA7750008D8FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A6DB93C21AA78CA008D8FF4 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = KakaoTalk_LogIn/Framework/KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		6A6DB93E21AA7B43008D8FF4 /* KakaoTalk_LogIn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KakaoTalk_LogIn-Bridging-Header.h"; sourceTree = "<group>"; };
+		6A6DB94221AA806C008D8FF4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				6A6DB92921AA774D008D8FF4 /* AppDelegate.swift */,
-				6A6DB92B21AA774D008D8FF4 /* ViewController.swift */,
+				6A6DB94121AA8057008D8FF4 /* ViewController */,
 				6A6DB92D21AA774D008D8FF4 /* Main.storyboard */,
 				6A6DB93021AA7750008D8FF4 /* Assets.xcassets */,
 				6A6DB93221AA7750008D8FF4 /* LaunchScreen.storyboard */,
@@ -76,6 +78,15 @@
 				6A6DB93C21AA78CA008D8FF4 /* KakaoOpenSDK.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A6DB94121AA8057008D8FF4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6A6DB94221AA806C008D8FF4 /* MainViewController.swift */,
+				6A6DB92B21AA774D008D8FF4 /* LoginViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +161,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A6DB92C21AA774D008D8FF4 /* ViewController.swift in Sources */,
+				6A6DB94321AA806C008D8FF4 /* MainViewController.swift in Sources */,
+				6A6DB92C21AA774D008D8FF4 /* LoginViewController.swift in Sources */,
 				6A6DB92A21AA774D008D8FF4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
